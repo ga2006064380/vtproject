@@ -1,0 +1,42 @@
+﻿@model IEnumerable<VTWebsite.Models.Tweet_List>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/EN/_Layout_Wiki.cshtml";
+    int n = 0;
+}
+
+<title>Latest news VTWiki_News</title>
+
+<header class="news-header">
+    <div class="news-title">
+        <h1>Latest news</h1>
+        <h2>News</h2>
+    </div>
+    <div class="news-flex">
+
+        @foreach (var item in Model)
+        {
+            if (n <= 98)
+            {
+                var twitterid = "https://twitter.com/x/status/" + @Html.DisplayFor(Modelitem => item.tweetsid).ToString();
+                <div>
+                    <blockquote class="twitter-tweet"><a href="@twitterid"></a></blockquote>
+                </div>
+                n += 1;
+            }
+        }
+    </div>
+</header>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+@*<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 30%
+        });
+
+    });
+</script>*@

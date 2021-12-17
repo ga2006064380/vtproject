@@ -1,0 +1,367 @@
+
+
+.wiki-members-fonts {
+    font-family: 'Tourney', cursive;
+    font-size: 6rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 5rem;
+    position: absolute;
+    bottom: 5%;
+    left: -4%;
+    z-index: 2;
+    -webkit-text-stroke: 3px rgb(205, 98, 118);
+    text-shadow: 0.5rem 0.5rem rgb(0 0 0 / 65%);
+    user-select: none;
+    pointer-events: none;
+}
+
+.wiki-members-HL, .wiki-members-NJ {
+    font-family: 'Tourney', cursive;
+    position: absolute;
+    font-size: 9rem;
+    color: rgb(205 98 118 / 8%);
+    right: 15%;
+    pointer-events: none;
+    /*top: -9.5%;*/
+}
+
+.wiki-members-body {
+    margin-left: 10%;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    position: relative;
+    min-height: calc(95vh - 12px);
+    justify-content: space-between;
+    user-select: none;
+}
+
+.wiki-members-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.wiki-members-img {
+    width: 60%;
+}
+
+    .wiki-members-img > img {
+        max-width: 100%;
+        height: auto;
+        max-height: 85vh;
+        width: 80%;
+        pointer-events: none;
+    }
+
+.wiki-members-imgbg {
+    position: absolute;
+    top: 3%;
+    opacity: 0.3;
+    z-index: -1;
+    left: -12%;
+    height: 100%;
+}
+
+    .wiki-members-imgbg > img {
+        height: 200%;
+        margin-left:-30%;
+        margin-top:-10%;
+    }
+
+.wiki-members-content {
+    width: 72%;
+    height: 56%;
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow-y: auto;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    flex-direction: column;
+}
+
+.wiki-members-tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+    .wiki-members-tab > button {
+        background: hsl(212deg 37% 89%);
+        border: none;
+        padding: 1rem 0;
+        letter-spacing: 4px;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+.wiki-members-btn.active{
+    background:white;
+}
+/*------------------------------文字設定-----------------------------*/
+.wiki-members-official {
+    padding: 1rem 2rem 0;
+    letter-spacing: 0.7px;
+}
+
+.wiki-members-official > h3 {
+    font-weight:bold;
+    font-size: 1.2rem;
+    color: rgb(205, 98, 118);
+    font-family:'Tourney',cursive;
+}
+
+.wiki-members-official > h2 {
+    margin-bottom: 15px;
+    margin-top:10px;
+    font-weight:bold;
+    font-size:2rem;
+}
+
+.wiki-members-official-fl {
+    font-size: 1.4rem;
+    font-weight:600;
+}
+
+.wiki-members-official > p {
+    font-size:1.05rem;
+    margin-bottom:8px;
+}
+
+.wiki-members-intro {
+    padding: 1rem 2rem 0;
+    letter-spacing: 0.7px;
+}
+
+.wiki-members-intro > h2 {
+    margin-bottom: 15px;
+    margin-top:10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.wiki-members-intro > h3 {
+    font-weight: bold;
+    font-size:1.2rem;
+    color:rgb(205, 98, 118);
+    font-family:'Tourney', cursive;
+}
+
+.wiki-members-intro > p {
+    font-size: 1.05rem;
+    margin-bottom: 26px;
+    line-height:1.5;
+    text-indent:2rem;
+}
+
+.wiki-members-information {
+    padding: 1rem 2rem 0;
+    letter-spacing: 0.7px;
+}
+
+.wiki-members-information > h2{
+    margin-bottom: 15px;
+    margin-top:10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.wiki-members-information > h2 > span{
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding-left: 0.5rem;
+}
+
+.wiki-members-information > h3{
+    font-weight: bold;
+    font-size:1.2rem;
+    color:rgb(205, 98, 118);
+    font-family:'Tourney', cursive;
+}
+/*------------------------------文字設定-----------------------------*/
+.wiki-members-tab-content {
+    display: none;
+}
+
+.wiki-members-tab-content.active{
+    display:block;
+}
+
+.wiki-members-icon {
+    display: flex;
+    position: absolute;
+    right: 21%;
+    bottom: 21%;
+    flex-direction: column;
+}
+
+.wiki-members-icon  button {
+    border: none;
+    font-size: 2.3rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
+    margin-bottom: 1rem;
+}
+
+    .wiki-members-icon  button > i {
+        position: relative;
+        color: white;
+        top: -2.5%;
+    }
+
+.wiki-members-youtube {
+    background: red;
+}
+
+.wiki-members-twitter {
+    background: rgb(22,163,243);
+}
+
+.wiki-members-globe {
+    background: rgb(125,129,131);
+}
+
+
+.wiki-members-information-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.wiki-members-information-grid-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    background: hsl(212deg 37% 89%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+}
+
+.wiki-members-information-grid-bottom {
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:1rem;
+}
+
+.wiki-members-grid-top-left {
+    border:none;
+}
+
+.wiki-members-grid-top-right {
+    border: none;
+}
+
+.wiki-members-grid-bottom-left {
+    border: none;
+    border-radius: 10px;
+    background: hsl(212deg 37% 89%);
+    width: 49%;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.wiki-members-grid-bottom-right {
+    border: none;
+    border-radius: 10px;
+    background: hsl(212deg 37% 89%);
+    width: 49%;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+iframe{
+    margin-bottom:1rem;
+}
+
+@media (max-width:1560px) {
+    .wiki-members-HL, .wiki-members-NJ{
+        font-size:7rem;
+    }
+
+    .wiki-members-fonts{
+        font-size:5rem;
+        margin-left:0;
+        bottom:10%;
+    }
+
+    .wiki-members-icon {
+        bottom: 20%;
+        right: 19.2%;
+    }
+}
+
+@media (max-width:640px) {
+    .wiki-members-fonts {
+        /*font-size: 3rem;
+        bottom: auto;
+        top: 33%;
+        left: 52%;
+        width: 90%;
+        -webkit-text-stroke: 1.5px rgb(205, 98, 118);
+        text-shadow: 0.5rem 0.5rem rgb(0 0 0 / 65%);
+        transform: translate(-50%, -50%);
+        margin-left: auto;*/
+        display:none;
+    }
+
+    .wiki-members-NJ{
+        display:none;
+    }
+
+    .wiki-members-body {
+        margin-left: 0;
+        justify-content: space-between;
+        user-select: none;
+    }
+
+    .wiki-members-flex {
+        justify-content: center;
+        width: auto;
+        flex-wrap: wrap;
+    }
+
+    .wiki-members-img {
+        width: auto;
+        text-align: center;
+    }
+
+        .wiki-members-img > img {
+            width: 70%;
+        }
+
+    .wiki-members-imgbg > img {
+        height: 55%;
+    }
+
+    .wiki-members-imgbg {
+        display:none;
+    }
+
+    .wiki-members-content {
+        width: 85%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .wiki-members-icon {
+        display: none;
+    }
+
+    .wiki-members-information-grid-top{
+        margin-bottom:0.4rem;
+    }
+
+    .wiki-members-information-grid-bottom {
+        margin-bottom: 1.5rem;
+    }
+
+    iframe {
+        border: 0;
+        width: 100%;
+        height: 190px;
+        margin-bottom: 1rem;
+    }
+}

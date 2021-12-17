@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbVTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Live_List">
+    <Key>
+      <PropertyRef Name="yt_video_id" />
+    </Key>
+    <Property Name="yt_channel_id" Type="nchar" MaxLength="24" Nullable="false" />
+    <Property Name="yt_video_id" Type="nchar" MaxLength="11" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="100" />
+    <Property Name="viewer_Count" Type="int" />
+    <Property Name="published_at" Type="datetime" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="created_at" Type="datetime" Nullable="false" />
+    <Property Name="updated_at" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Member_List">
+    <Key>
+      <PropertyRef Name="yt_id" />
+    </Key>
+    <Property Name="yt_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="yt_channel_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="org" Type="nvarchar" MaxLength="30" />
+    <Property Name="path" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tIntro">
+    <Key>
+      <PropertyRef Name="iId" />
+    </Key>
+    <Property Name="iId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iRole" Type="nvarchar" MaxLength="500" />
+    <Property Name="iFame" Type="nvarchar" MaxLength="500" />
+    <Property Name="iSpecial" Type="nvarchar" MaxLength="200" />
+    <Property Name="iStream" Type="nvarchar" MaxLength="200" />
+    <Property Name="bgpath" Type="nchar" MaxLength="200" />
+    <Property Name="tMemberId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tIntro_en">
+    <Key>
+      <PropertyRef Name="iId" />
+    </Key>
+    <Property Name="iId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iRole" Type="nvarchar" MaxLength="1500" />
+    <Property Name="iFame" Type="nvarchar" MaxLength="1500" />
+    <Property Name="iSpecial" Type="nvarchar" MaxLength="1000" />
+    <Property Name="iStream" Type="nvarchar" MaxLength="200" />
+    <Property Name="bgpath" Type="nchar" MaxLength="200" />
+    <Property Name="tMemberId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tIntro_jp">
+    <Key>
+      <PropertyRef Name="iId" />
+    </Key>
+    <Property Name="iId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iRole" Type="nvarchar" MaxLength="1500" />
+    <Property Name="iFame" Type="nvarchar" MaxLength="1500" />
+    <Property Name="iSpecial" Type="nvarchar" MaxLength="1000" />
+    <Property Name="iStream" Type="nvarchar" MaxLength="200" />
+    <Property Name="bgpath" Type="nchar" MaxLength="200" />
+    <Property Name="tMemberId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tMember">
+    <Key>
+      <PropertyRef Name="tId" />
+    </Key>
+    <Property Name="tId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tName" Type="nvarchar" MaxLength="50" />
+    <Property Name="tjpName" Type="nvarchar" MaxLength="10" />
+    <Property Name="tTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="tNick" Type="nvarchar" MaxLength="50" />
+    <Property Name="tSex" Type="nvarchar" MaxLength="5" />
+    <Property Name="tBirth" Type="date" />
+    <Property Name="tHeight" Type="nvarchar" MaxLength="3" />
+    <Property Name="tInterest" Type="nvarchar" MaxLength="50" />
+    <Property Name="tHate" Type="nvarchar" MaxLength="50" />
+    <Property Name="tStar" Type="nchar" MaxLength="30" />
+    <Property Name="tAge" Type="nvarchar" MaxLength="10" />
+    <Property Name="tLanguage" Type="nvarchar" MaxLength="20" />
+    <Property Name="tMemberId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tMember_en">
+    <Key>
+      <PropertyRef Name="tId" />
+    </Key>
+    <Property Name="tId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tName" Type="nvarchar" MaxLength="50" />
+    <Property Name="tjpName" Type="nvarchar" MaxLength="10" />
+    <Property Name="tTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="tNick" Type="nvarchar" MaxLength="50" />
+    <Property Name="tSex" Type="nvarchar" MaxLength="10" />
+    <Property Name="tBirth" Type="date" />
+    <Property Name="tHeight" Type="nvarchar" MaxLength="3" />
+    <Property Name="tInterest" Type="nvarchar" MaxLength="200" />
+    <Property Name="tHate" Type="nvarchar" MaxLength="200" />
+    <Property Name="tStar" Type="nchar" MaxLength="30" />
+    <Property Name="tAge" Type="nvarchar" MaxLength="50" />
+    <Property Name="tLanguage" Type="nvarchar" MaxLength="20" />
+    <Property Name="tMemberId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tMember_jp">
+    <Key>
+      <PropertyRef Name="tId" />
+    </Key>
+    <Property Name="tId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tName" Type="nvarchar" MaxLength="50" />
+    <Property Name="tjpName" Type="nvarchar" MaxLength="10" />
+    <Property Name="tTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="tNick" Type="nvarchar" MaxLength="50" />
+    <Property Name="tSex" Type="nvarchar" MaxLength="10" />
+    <Property Name="tBirth" Type="date" />
+    <Property Name="tHeight" Type="nvarchar" MaxLength="3" />
+    <Property Name="tInterest" Type="nvarchar" MaxLength="200" />
+    <Property Name="tHate" Type="nvarchar" MaxLength="200" />
+    <Property Name="tStar" Type="nchar" MaxLength="30" />
+    <Property Name="tAge" Type="nvarchar" MaxLength="50" />
+    <Property Name="tLanguage" Type="nvarchar" MaxLength="20" />
+    <Property Name="tMemberId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tToDo">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="fText" Type="nvarchar" MaxLength="100" />
+    <Property Name="fDate" Type="date" />
+  </EntityType>
+  <EntityType Name="tToDo_en">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="fText" Type="nvarchar" MaxLength="300" />
+    <Property Name="fDate" Type="date" />
+  </EntityType>
+  <EntityType Name="tToDo_jp">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="fText" Type="nvarchar" MaxLength="100" />
+    <Property Name="fDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Tweet_List">
+    <Key>
+      <PropertyRef Name="tweetsid" />
+    </Key>
+    <Property Name="twitterid" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="tweetsid" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tweet_created_at" Type="datetime" Nullable="false" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="updated_at" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Video_List">
+    <Key>
+      <PropertyRef Name="yt_video_id" />
+    </Key>
+    <Property Name="yt_channel_id" Type="nchar" MaxLength="24" Nullable="false" />
+    <Property Name="yt_video_id" Type="nchar" MaxLength="11" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="100" />
+    <Property Name="published_at" Type="datetime" />
+    <Property Name="status" Type="nvarchar" MaxLength="10" />
+    <Property Name="created_at" Type="datetime" Nullable="false" />
+    <Property Name="updated_at" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VTuber_List">
+    <Key>
+      <PropertyRef Name="yt_channel_id" />
+    </Key>
+    <Property Name="yt_channel_id" Type="nvarchar" MaxLength="24" Nullable="false" />
+    <Property Name="yt_channel_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="org" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="suborg" Type="nvarchar" MaxLength="20" />
+    <Property Name="photo" Type="nvarchar" MaxLength="2083" />
+    <Property Name="twitter" Type="nvarchar" MaxLength="15" />
+    <Property Name="subscriber_count" Type="int" Nullable="false" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="updated_at" Type="datetime" />
+    <Property Name="crawled_at" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="dbVTModelStoreContainer">
+    <EntitySet Name="Live_List" EntityType="Self.Live_List" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Member_List" EntityType="Self.Member_List" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tIntro" EntityType="Self.tIntro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tIntro_en" EntityType="Self.tIntro_en" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tIntro_jp" EntityType="Self.tIntro_jp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMember" EntityType="Self.tMember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMember_en" EntityType="Self.tMember_en" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMember_jp" EntityType="Self.tMember_jp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tToDo" EntityType="Self.tToDo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tToDo_en" EntityType="Self.tToDo_en" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tToDo_jp" EntityType="Self.tToDo_jp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tweet_List" EntityType="Self.Tweet_List" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Video_List" EntityType="Self.Video_List" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VTuber_List" EntityType="Self.VTuber_List" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

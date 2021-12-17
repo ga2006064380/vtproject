@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="31c5f9343c9c4f7789b60aa9c70c0858" Name="Diagram1">
+        <EntityTypeShape EntityType="dbVTModel.Live_List" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbVTModel.Member_List" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbVTModel.tIntro" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="dbVTModel.tIntro_en" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbVTModel.tIntro_jp" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="dbVTModel.tMember" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbVTModel.tMember_en" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="dbVTModel.tMember_jp" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="dbVTModel.tToDo" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbVTModel.tToDo_en" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="dbVTModel.tToDo_jp" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="dbVTModel.Video_List" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="dbVTModel.VTuber_List" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbVTModel.Tweet_List" Width="1.5" PointX="9.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

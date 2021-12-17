@@ -1,0 +1,345 @@
+@import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+
+a {
+    text-decoration: none;
+}
+
+.lay-wiki-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../Photo/BK.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+}
+
+.wiki-hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
+
+.lay-wiki-bg-main {
+    background-color: #D1E8E4;
+    font-family: 'Noto Sans TC', sans-serif;
+    padding-bottom:0;
+}
+
+
+
+
+/*----------------------------------nav--------------------------------------*/
+.lay-wiki-nav-bg {
+    background-color: rgb(37, 37, 37);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:10;
+    height:60px;
+    color:white;
+}
+
+.lay-wiki-nav-flex {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    margin-top:0.35rem;
+    margin-left: 2rem;
+    margin-right: 4.8rem;
+}
+
+.lay-wiki-nav-logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size:24px;
+    position:relative;
+    top: 0.3rem;
+}
+
+.lay-wiki-nav-logo >a {
+    text-decoration: none;
+    color:white;
+}
+
+.lay-wiki-nav-logo > a:hover{
+    color:#D1E8E4;
+    transition:0.3s;
+}
+
+.lay-wiki-nav-link > a {
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    margin: 0rem 1.5rem;
+    align-self: stretch;
+    padding: 10px 0 10px;
+    font-size: 1rem;
+}
+
+.lay-wiki-nav-link{
+    display:flex;
+    justify-content:space-between;
+    margin-top:1px;
+}
+
+
+
+
+
+/*----------------------------------lang--------------------------------------*/
+
+
+.lay-wiki-lang-menu {
+    position:relative;
+    top:0.55rem;
+    left:1.5rem;
+}
+
+.lay-wiki-selected-lang {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    position: relative;
+    top: 0.5px;
+    width: 105px;
+    height: 45px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+.lay-wiki-selected-lang:before {
+    content: '';
+    display: block;
+    width: 27px;
+    height: 27px;
+    position:relative;
+    top: 5px;
+    background-image: url(https://www.countryflags.com/wp-content/uploads/taiwan-flag-png-large.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.lay-wiki-selected-lang-EN {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    position: relative;
+    top: 0.5px;
+    width: 105px;
+    height: 45px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+    .lay-wiki-selected-lang-EN:before {
+        content: '';
+        display: block;
+        width: 27px;
+        height: 27px;
+        position: relative;
+        top: 5px;
+        background-image: url(https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+.lay-wiki-selected-lang-JP {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    position: relative;
+    top: 0.5px;
+    width: 105px;
+    height: 45px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+    .lay-wiki-selected-lang-JP:before {
+        content: '';
+        display: block;
+        width: 27px;
+        height: 27px;
+        position: relative;
+        top: 5px;
+        background-image: url(https://www.countryflags.com/wp-content/uploads/japan-flag-png-large.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+.lay-wiki-lang-menu ul {
+    margin:0;
+    padding:0;
+    background-color:#fff;
+    border: 1px solid #f8f8f8;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0px;
+}
+
+.lay-wiki-lang-menu ul li {
+    list-style: none;
+    display:flex;
+    justify-content:space-between;
+}
+
+.lay-wiki-lang-menu ul li a {
+    width:110px;
+    display:block;
+    padding: 8px 4px 3px 8px;
+    font-size:0.8rem;
+    font-weight:600;
+    color:black;
+}
+
+.lay-wiki-lang-menu ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin-right:8px;
+    vertical-align: middle;
+    position:relative;
+    top:3.5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.lay-wiki-lang-menu ul li a:hover {
+    background-color:#f2f2f2;
+}
+
+.lay-wiki-en:before {
+    background-image: url(https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png);
+}
+.lay-wiki-ch:before {
+    background-image: url(https://www.countryflags.com/wp-content/uploads/taiwan-flag-png-large.png);
+}
+.lay-wiki-jp:before {
+    background-image: url(https://www.countryflags.com/wp-content/uploads/japan-flag-png-large.png);
+}
+
+
+.lay-wiki-lang-menu:hover ul {
+    display: block;
+}
+
+.lay-wiki-sidenav{
+    display:none;
+}
+
+
+/*----------------------------------640--------------------------------------*/
+@media (max-width: 640px){
+    .lay-wiki-nav-logo {
+        font-size: 22px;
+    }
+
+    .lay-wiki-nav-link {
+        display: none;
+    }
+
+    .lay-wiki-nav-flex {
+        position: relative;
+        top: 5.5px;
+        margin-left: 1.5rem;
+        margin-right: 0rem;
+    }
+
+    .lay-wiki-lang-menu{
+        top:1rem;
+        left:10rem;
+    }
+
+    /*----------------------------------640--------------------------------------*/
+    .lay-wiki-sidenav {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(37, 37, 37);
+        position: fixed;
+        top: 3.75rem;
+        z-index:10;
+        transition: 0.5s;
+        transform: translate(-100%);
+        display:block;
+    }
+
+    .lay-wiki-show-sidebar {
+        transform: translate(0);
+    }
+
+    .lay-wiki-sidenav a:hover {
+        background: #f1f1f1;
+        color: black;
+        transition: 0.5s;
+    }
+
+    .lay-wiki-sidenav a {
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        padding: 1rem 0.9rem;
+        transition: 0.5s;
+    }
+
+    .lay-wiki-sidenav > ul {
+        display: block;
+        color: white;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .lay-wiki-side-top{
+        border-top:1.5px solid white;
+    }
+
+    .lay-wiki-sidenav i {
+        margin-left: 11px;
+        margin-right:10px;
+    }
+
+    /*----------------------------------640--------------------------------------*/
+}
+
+
+.lay-wiki-nav-link > a:hover span {
+    background: #ffd800;
+    height: 4px;
+    width: auto;
+    position: relative;
+    bottom: -13px;
+    left: 3px;
+    display: block;
+    transition: background 0.3s ease 0s;
+}
+/*----------------------------------640--------------------------------------*/
+/*----------------------------------nav--------------------------------------*/
+.lay-wiki-body-content {
+    margin-top: 60px;
+    overflow:hidden;
+}

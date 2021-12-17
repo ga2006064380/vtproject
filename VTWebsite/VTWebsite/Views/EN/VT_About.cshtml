@@ -1,0 +1,166 @@
+﻿@model IEnumerable<VTWebsite.Models.tToDo_en>
+
+@{
+    Layout = "~/Views/Shared/EN/_Layout_DisIndex.cshtml";
+    ViewBag.Title = "VT_About";
+    int no = 1;
+    string str1;
+}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Shrikhand&family=Tourney:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<title>About VT_About</title>
+
+<header class="about-header">
+    <div><h2>About</h2></div>
+    <div class="about-content-flex">
+        <div class="about-content-purpose">
+            <h3>Establishment Purpose</h3>
+            <h4>
+                The purpose of this website is to integrate the information of "Hololive" and "Nijisanji", the two main VTuber companies, to reduce the search cost of users, and to add the live broadcast and highlight videos to make more people know about VTuber. VTuber, there is no website that integrates VTuber live broadcast and VTuber related information and introduction. Maybe users are interested in VTuber after watching live broadcast, but they give up searching VTuber because of the uneven information on the internet or because of language problem.
+            </h4>
+            <h4>
+                These problems may reduce the enthusiasm of first-time VTuber viewers to VTuber, so this project intends to use the multi-window live streaming function and VT Encyclopedia to integrate video and information. We have also added the function of switching between Chinese, English and Japanese languages to reduce the problem of users not searching for VTuber due to language barrier.            </h4>
+        </div>
+        <div class="about-content-thanks">
+            <h3>Professor's guidance (Acknowledgement)</h3>
+            <h4>
+                We are most grateful to our advisor, Professor Yongcong Hou, for his careful guidance in developing the topic, providing us with valuable advice from deciding on the topic to writing the code and designing the web content. We were able to complete this project within the time limit by providing continuous guidance and encouragement.
+            </h4>
+        </div>
+        <div class="about-content-developer">
+            <h3>Developer</h3>
+            <p>National Formosa University&nbsp;Department of Information Management, 4th year</p>
+            <hr />
+            <h4>40741114&nbsp;吳青賢</h4>
+            <h4>40741116&nbsp;吳偉菖</h4>
+            <h4>40741142&nbsp;黃睿豪</h4>
+            <h4>40741149&nbsp;鄭瑞成</h4>
+        </div>
+        <div class="about-content-question">
+            <h3>Common Questions</h3>
+            <div class="about-content-question-flex">
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>Why does it take so long to load some pages?</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">Because some pages are captured by YouTube and the speed of the server equipment is not fast, so it takes a little longer to load.</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>Why there is no response when I click the video?</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">The video is retrieved from YouTube by the backend, if the link is wrong or not retrieved successfully, it will cause an error, we will fix it as soon as possible, please feel free to contact us.</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>Is there an Android/iOS version of the VTDiscovery app?</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">The app version for mobile devices is not yet developed, and some of the functions of the website are not yet complete.</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>What are the functions of the VTWiki page?</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">VTWiki mainly organizes VTuber's information and tries its best to complete it. It also contains the profiles of two major Japanese virtual reality companies, so that users can have a basic understanding of the VTuber and the company he/she belongs to while watching the person's information.</p>
+                    </div>
+                </div>
+                
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>Why does the live video lag?</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">There are several possibilities for lagging when watching a live video. The first one is that the user's computer is not equipped with good performance.</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>Where can I view VTuber-related information?</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">There is a link to VTWiki on the top navigation bar and the left sidebar of the VTDiscovery homepage. Click on it to link to the VTWiki homepage, and there is a character introduction page on the top navigation page, and when you enter, there are images of VTubers from two major companies.</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>Why there is no response when I change the website settings?</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">If you still can't do it, please contact our developers and we will improve it as soon as possible to give users the best experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-content-three">
+            <div class="about-content-contact">
+                <h3>Contact Method</h3>
+                <p>Developer1--Email：40741114@gmail.com</p>
+                <p>Developer2--Email：40741116@gmail.com</p>
+                <p>Developer3--Email：40741142@gmail.com</p>
+                <p>Developer4--Email：40741149@gmail.com</p>
+            </div>
+            <div class="about-content-link">
+                <h3>Related Links</h3>
+                <p>Hololive Production Company：<a href="https://en.hololive.tv">https://en.hololive.tv</a></p>
+                <p>Nijisanji Company：<a href="https://www.nijisanji.jp/en">https://www.nijisanji.jp/en</a></p>
+                <p>Nijisanji Company's New Nebsite Link：<a href="https://www.anycolor.co.jp/en">https://www.anycolor.co.jp/en</a></p>
+            </div>
+            <div class="about-content-update">
+                <h3>Update Log</h3>
+
+
+
+                <div class="set-ac-fr" id="accordion">
+                    @foreach (var item in Model)
+                    {
+                        str1 = "collapse" + no;
+                        <div class="card set-ac-card">
+                            <div class="card-header set-ac-header collapsed" data-toggle="collapse" data-target="#@str1" aria-expanded="false" aria-controls="@str1">
+                                <span class="set-ac-time">@DateTime.Parse(item.fDate.ToString()).ToString("yyyy/M/d ")</span>
+                                <span class="title set-ac-btn-title">@Html.DisplayFor(modelItem => item.fTitle)</span>
+                                <span class="accicon set-ac-icon"><i class="fas fa-angle-down rotate-icon set-ac-icon-item"></i></span>
+                            </div>
+
+                            <div id="@str1" class="collapse set-ac-colpse" data-parent="#accordion">
+                                <div class="set-ac-colpse-cd-body">
+                                    <p>
+                                        @Html.DisplayFor(modelitem => item.fText)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        no = no + 1;
+                    }
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a91a27e46f.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

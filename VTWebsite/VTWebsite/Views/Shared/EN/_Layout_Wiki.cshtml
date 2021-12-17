@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&family=Shrikhand&family=Tourney:ital,wght@1,900&display=swap" rel="stylesheet">
+    @*Audiowide*@
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="lay-wiki-bg-main">
+
+    <!-- 載入畫面 -->
+
+    <div class="lay-wiki-preloader">
+        <img src="~/Photo/loading.gif" alt="preloader" class="preloader__item" />
+    </div>
+
+    <!-- 載入畫面 -->
+    <!-- 導覽列 -->
+
+    <header class="lay-wiki-nav-bg">
+        <nav class="lay-wiki-nav-flex">
+            <div class="lay-wiki-nav-logo">
+                <a href="/EN/VTWiki">VTWiki-EN</a>
+            </div>
+
+            <div class="lay-wiki-nav-link">
+                <a href="/EN/VTDiscovery">VTDiscovery<span></span></a>
+                <a href="/EN/VTWiki_People">Character Introduction<span></span></a>
+                <a href="/EN/VTWiki_Firm">Brand Introduction<span></span></a>
+                <a href="/EN/VTWiki_News">Latest News<span></span></a>
+
+
+                <div class="lay-wiki-lang-menu">
+                    <div class="lay-wiki-selected-lang-EN">
+                        English
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Home/VTWiki" class="lay-wiki-ch">繁體中文</a>
+                        </li>
+                        <li>
+                            <a href="/EN/VTWiki" class="lay-wiki-en">English</a>
+                        </li>
+                        <li>
+                            <a href="/JP/VTWiki" class="lay-wiki-jp">日本語</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="lay-wiki-sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <!-- 導覽列 -->
+    <!-- 選單 -->
+    <div class="lay-wiki-sidenav">
+        <ul>
+            <li class="lay-wiki-side-top">
+                <a href="/EN/VTDiscovery"><i class="far fa-bell"></i>VTDiscovery</a>
+            </li>
+            <li>
+                <a href="/EN/VTWiki_People"><i class="fas fa-user"></i>Character Introduction</a>
+            </li>
+            <li>
+                <a href="/EN/VTWiki_Firm"><i class="fas fa-certificate"></i>Brand Introduction</a>
+            </li>
+            <li>
+                <a href="/EN/VTWiki_News"><i class="fas fa-rss"></i>Latest News</a>
+            </li>
+            <li class="test">
+                <div class="lay-wiki-lang-menu">
+                    <div class="lay-wiki-selected-lang-EN">
+                        English
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Home/VTWiki" class="lay-wiki-ch">繁體中文</a>
+                        </li>
+                        <li>
+                            <a href="/EN/VTWiki" class="lay-wiki-en">English</a>
+                        </li>
+                        <li>
+                            <a href="/JP/VTWiki" class="lay-wiki-jp">日本語</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 選單 -->
+
+
+    <div class="lay-wiki-body-content">
+        @RenderBody()
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+            </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/CustomScripts/_Layout_Wiki.js"></script>
+    <script src="~/Scripts/CustomScripts/PageJs/_FrontPage_VTWiki_Firm.js"></script>
+    <script src="~/Scripts/CustomScripts/PageJs/_FrontPage_VTWiki_People.js"></script>
+    <script src="~/Scripts/CustomScripts/PageJs/_FrontPage_VTWiki_Members.js"></script>
+</body>
+</html>

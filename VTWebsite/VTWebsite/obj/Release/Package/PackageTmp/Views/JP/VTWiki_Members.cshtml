@@ -1,0 +1,83 @@
+﻿@model IEnumerable<VTWebsite.Models.MembersIntro_jp>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/JP/_Layout_Wiki.cshtml";
+}
+<title>キャラクター情報ページ VTWiki_Members</title>
+
+<div class="wiki-members-body">
+    @foreach (var item in Model)
+    {
+        if (ViewBag.yt_channel_name == item.member_jp.tName)
+        {
+            <h1 class="wiki-members-fonts"> @Html.DisplayFor(modelitem => item.member_jp.tName)</h1>
+            @*<h1 class="wiki-members-HL">Hololive</h1>*@
+            <h1 class="wiki-members-NJ">@ViewBag.org</h1>
+            <div class="wiki-members-flex">
+                <div class="wiki-members-img"><img src="~/Photo/FullBody/@item.intro_jp.bgpath" alt="Alternate Text" /></div>
+                <div class="wiki-members-imgbg"><img src="~/Photo/FullBody/@item.intro_jp.bgpath" alt="Alternate Text" /></div>
+                <div class="wiki-members-content">
+                    <div class="wiki-members-icon">
+                        <button class="wiki-members-youtube"><i class="fab fa-youtube"></i></button>
+                        <button class="wiki-members-twitter"><i class="fab fa-twitter"></i></button>
+                        <button class="wiki-members-globe"><i class="fas fa-globe-americas"></i></button>
+                    </div>
+                    <div class="wiki-members-tab">
+                        <button class="wiki-members-btn active" data-id="official">公式メッセージ</button>
+                        <button class="wiki-members-btn" data-id="intro">メンバー</button>
+                        <button class="wiki-members-btn" data-id="information">個人情報</button>
+                    </div>
+
+                    <div class="wiki-members-official wiki-members-tab-content active" id="official">
+                        <h3>@Html.DisplayFor(modelitem => item.member_jp.tTitle)</h3>
+                        <h2>@Html.DisplayFor(modelitem => item.member_jp.tjpName)</h2>
+                        <p>
+                            @Html.DisplayFor(modelitem => item.intro_jp.iSpecial)<br /><br />
+                            <span class="wiki-members-official-fl">初配信</span>
+                        </p>
+                        <iframe width="560" height="315" src="@item.intro_jp.iStream" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="wiki-members-intro wiki-members-tab-content" id="intro">
+                        <h3>@Html.DisplayFor(modelitem => item.member_jp.tTitle)</h3>
+                        <h2>@Html.DisplayFor(modelitem => item.member_jp.tjpName)</h2>
+                        <p>@Html.DisplayFor(modelitem => item.intro_jp.iRole)</p>
+                        <h2>名声の旅</h2>
+                        <p>@Html.DisplayFor(modelitem => item.intro_jp.iFame)</p>
+                    </div>
+
+                    <div class="wiki-members-information wiki-members-tab-content" id="information">
+                        <h3>@Html.DisplayFor(modelitem => item.member_jp.tTitle)</h3>
+                        <h2>@Html.DisplayFor(modelitem => item.member_jp.tjpName)<span>( @Html.DisplayFor(modelitem => item.member_jp.tLanguage))</span></h2>
+                        <div class="wiki-members-information-flex">
+                            <div class="wiki-members-information-grid-top">
+                                <div class="wiki-members-grid-top-left">
+                                    <p>ニックネーム：@Html.DisplayFor(modelitem => item.member_jp.tNick)</p>
+                                    <p>性別：@Html.DisplayFor(modelitem => item.member_jp.tSex)</p>
+                                    <span>身長：@Html.DisplayFor(modelitem => item.member_jp.tHeight)cm</span>
+                                </div>
+                                <div class="wiki-members-grid-top-right">
+                                    <p>よわい：@Html.DisplayFor(modelitem => item.member_jp.tAge)</p>
+                                    <p>誕生日：@DateTime.Parse(item.member_jp.tBirth.ToString()).ToString(" M 月 d 日")</p>
+                                    <span>星座：@Html.DisplayFor(modelitem => item.member_jp.tStar)</span>
+                                </div>
+                            </div>
+                            <div class="wiki-members-information-grid-bottom">
+                                <div class="wiki-members-grid-bottom-left">
+                                    <p>お気に入り：</p>
+                                    <span>@Html.DisplayFor(modelitem => item.member_jp.tInterest)</span>
+                                </div>
+                                <div class="wiki-members-grid-bottom-right">
+                                    <p>嫌い：</p>
+                                    <span>@Html.DisplayFor(modelitem => item.member_jp.tHate)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    }
+</div>

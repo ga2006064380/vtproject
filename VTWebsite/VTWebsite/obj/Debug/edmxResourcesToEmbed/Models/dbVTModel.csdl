@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbVTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbVTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Live_List" EntityType="dbVTModel.Live_List" />
+    <EntitySet Name="Member_List" EntityType="dbVTModel.Member_List" />
+    <EntitySet Name="tIntro" EntityType="dbVTModel.tIntro" />
+    <EntitySet Name="tIntro_en" EntityType="dbVTModel.tIntro_en" />
+    <EntitySet Name="tIntro_jp" EntityType="dbVTModel.tIntro_jp" />
+    <EntitySet Name="tMember" EntityType="dbVTModel.tMember" />
+    <EntitySet Name="tMember_en" EntityType="dbVTModel.tMember_en" />
+    <EntitySet Name="tMember_jp" EntityType="dbVTModel.tMember_jp" />
+    <EntitySet Name="tToDo" EntityType="dbVTModel.tToDo" />
+    <EntitySet Name="tToDo_en" EntityType="dbVTModel.tToDo_en" />
+    <EntitySet Name="tToDo_jp" EntityType="dbVTModel.tToDo_jp" />
+    <EntitySet Name="Tweet_List" EntityType="dbVTModel.Tweet_List" />
+    <EntitySet Name="Video_List" EntityType="dbVTModel.Video_List" />
+    <EntitySet Name="VTuber_List" EntityType="dbVTModel.VTuber_List" />
+  </EntityContainer>
+  <EntityType Name="Live_List">
+    <Key>
+      <PropertyRef Name="yt_video_id" />
+    </Key>
+    <Property Name="yt_channel_id" Type="String" Nullable="false" MaxLength="24" FixedLength="true" Unicode="true" />
+    <Property Name="yt_video_id" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="viewer_Count" Type="Int32" />
+    <Property Name="published_at" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Member_List">
+    <Key>
+      <PropertyRef Name="yt_id" />
+    </Key>
+    <Property Name="yt_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yt_channel_name" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="org" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tIntro">
+    <Key>
+      <PropertyRef Name="iId" />
+    </Key>
+    <Property Name="iId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iRole" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="iFame" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="iSpecial" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="iStream" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="bgpath" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="tMemberId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tIntro_en">
+    <Key>
+      <PropertyRef Name="iId" />
+    </Key>
+    <Property Name="iId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iRole" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="iFame" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="iSpecial" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="iStream" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="bgpath" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="tMemberId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tIntro_jp">
+    <Key>
+      <PropertyRef Name="iId" />
+    </Key>
+    <Property Name="iId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="iRole" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="iFame" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="iSpecial" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="iStream" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="bgpath" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="tMemberId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tMember">
+    <Key>
+      <PropertyRef Name="tId" />
+    </Key>
+    <Property Name="tId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tjpName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tNick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tSex" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tBirth" Type="DateTime" Precision="0" />
+    <Property Name="tHeight" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="tInterest" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tHate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tStar" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="tAge" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tLanguage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tMemberId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tMember_en">
+    <Key>
+      <PropertyRef Name="tId" />
+    </Key>
+    <Property Name="tId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tjpName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tNick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tSex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tBirth" Type="DateTime" Precision="0" />
+    <Property Name="tHeight" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="tInterest" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tHate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tStar" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="tAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tLanguage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tMemberId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tMember_jp">
+    <Key>
+      <PropertyRef Name="tId" />
+    </Key>
+    <Property Name="tId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tjpName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tNick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tSex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tBirth" Type="DateTime" Precision="0" />
+    <Property Name="tHeight" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="tInterest" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tHate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tStar" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="tAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tLanguage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tMemberId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tToDo">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tToDo_en">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fText" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="fDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tToDo_jp">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tweet_List">
+    <Key>
+      <PropertyRef Name="tweetsid" />
+    </Key>
+    <Property Name="twitterid" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="tweetsid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tweet_created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Video_List">
+    <Key>
+      <PropertyRef Name="yt_video_id" />
+    </Key>
+    <Property Name="yt_channel_id" Type="String" Nullable="false" MaxLength="24" FixedLength="true" Unicode="true" />
+    <Property Name="yt_video_id" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="published_at" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="VTuber_List">
+    <Key>
+      <PropertyRef Name="yt_channel_id" />
+    </Key>
+    <Property Name="yt_channel_id" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="yt_channel_name" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="org" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="suborg" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="2083" FixedLength="false" Unicode="true" />
+    <Property Name="twitter" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="subscriber_count" Type="Int32" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+    <Property Name="crawled_at" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

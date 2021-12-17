@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA3B30AC-0635-42AA-9682-6114A30C6E03}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VTWebsite</RootNamespace>
+    <AssemblyName>VTWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ENController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JPController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbVTModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVTModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbVTModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbVTModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbVTModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Live_List.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MembersIntro_en.cs" />
+    <Compile Include="Models\MembersIntro_jp.cs" />
+    <Compile Include="Models\MembersIntro.cs" />
+    <Compile Include="Models\Member_List.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tIntro.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tIntro_en.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tIntro_jp.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tMember.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tMember_en.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tMember_jp.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tToDo.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tToDo_en.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tToDo_jp.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tweet_List.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VideoVtuber.cs" />
+    <Compile Include="Models\Video_List.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VTuber_List.cs">
+      <DependentUpon>dbVTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\CustomCSS\owl.carousel.min.css" />
+    <Content Include="Content\CustomCSS\owl.theme.default.min.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTDis_Video.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTDis_Main.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTDis_About.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTDis_Set.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTWiki_Members.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTWiki_News.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTWiki_People.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTWiki_Firm.css" />
+    <Content Include="Content\CustomCSS\PageCss\_FrontPage_VTWiki.css" />
+    <Content Include="Content\CustomCSS\_Layout_DisIndex.css" />
+    <Content Include="Content\CustomCSS\_Layout_Wiki.css" />
+    <Content Include="Content\CustomCSS\_Layout_DisMuti.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\dbVTModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>dbVTModel.Context.cs</LastGenOutput>
+      <DependentUpon>dbVTModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\dbVTModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbVTModel.edmx</DependentUpon>
+      <LastGenOutput>dbVTModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Photo\4K.jpg" />
+    <Content Include="Photo\BK.png" />
+    <Content Include="Photo\FullBody\FHL01.png" />
+    <Content Include="Photo\FullBody\FHL02.png" />
+    <Content Include="Photo\FullBody\FHL03.png" />
+    <Content Include="Photo\FullBody\FHL04.png" />
+    <Content Include="Photo\FullBody\FHL05.png" />
+    <Content Include="Photo\FullBody\FHL06.png" />
+    <Content Include="Photo\FullBody\FHL07.png" />
+    <Content Include="Photo\FullBody\FHL08.png" />
+    <Content Include="Photo\FullBody\FHL09.png" />
+    <Content Include="Photo\FullBody\FHL10.png" />
+    <Content Include="Photo\FullBody\FHL11.png" />
+    <Content Include="Photo\FullBody\FHL12.png" />
+    <Content Include="Photo\FullBody\FHL13.png" />
+    <Content Include="Photo\FullBody\FHL14.png" />
+    <Content Include="Photo\FullBody\FHL15.png" />
+    <Content Include="Photo\FullBody\FHL16.png" />
+    <Content Include="Photo\FullBody\FHL17.png" />
+    <Content Include="Photo\FullBody\FHL18.png" />
+    <Content Include="Photo\FullBody\FHL19.png" />
+    <Content Include="Photo\FullBody\FHL20.png" />
+    <Content Include="Photo\FullBody\FNJ01.png" />
+    <Content Include="Photo\FullBody\FNJ02.png" />
+    <Content Include="Photo\FullBody\FNJ03.png" />
+    <Content Include="Photo\FullBody\FNJ04.png" />
+    <Content Include="Photo\FullBody\FNJ05.png" />
+    <Content Include="Photo\FullBody\FNJ06.png" />
+    <Content Include="Photo\FullBody\FNJ07.png" />
+    <Content Include="Photo\FullBody\FNJ08.png" />
+    <Content Include="Photo\FullBody\FNJ09.png" />
+    <Content Include="Photo\FullBody\FNJ10.png" />
+    <Content Include="Photo\FullBody\FNJ11.png" />
+    <Content Include="Photo\FullBody\FNJ12.png" />
+    <Content Include="Photo\FullBody\FNJ13.png" />
+    <Content Include="Photo\FullBody\FNJ14.png" />
+    <Content Include="Photo\FullBody\FNJ15.png" />
+    <Content Include="Photo\FullBody\FNJ16.png" />
+    <Content Include="Photo\FullBody\FNJ17.png" />
+    <Content Include="Photo\FullBody\FNJ18.png" />
+    <Content Include="Photo\FullBody\FNJ19.png" />
+    <Content Include="Photo\FullBody\FNJ20.png" />
+    <Content Include="Photo\HLGIF.gif" />
+    <Content Include="Photo\HL\HL01.png" />
+    <Content Include="Photo\HL\HL02.png" />
+    <Content Include="Photo\HL\HL03.png" />
+    <Content Include="Photo\HL\HL04.png" />
+    <Content Include="Photo\HL\HL05.png" />
+    <Content Include="Photo\HL\HL06.png" />
+    <Content Include="Photo\HL\HL07.png" />
+    <Content Include="Photo\HL\HL08.png" />
+    <Content Include="Photo\HL\HL09.png" />
+    <Content Include="Photo\HL\HL10.png" />
+    <Content Include="Photo\HL\HL11.png" />
+    <Content Include="Photo\HL\HL12.png" />
+    <Content Include="Photo\HL\HL13.png" />
+    <Content Include="Photo\HL\HL14.png" />
+    <Content Include="Photo\HL\HL15.png" />
+    <Content Include="Photo\HL\HL16.png" />
+    <Content Include="Photo\HL\HL17.png" />
+    <Content Include="Photo\HL\HL18.png" />
+    <Content Include="Photo\HL\HL19.png" />
+    <Content Include="Photo\HL\HL20.png" />
+    <Content Include="Photo\HL\Hololive_production_Logo.png" />
+    <Content Include="Photo\lay-bubble.png" />
+    <Content Include="Photo\loading.gif" />
+    <Content Include="Photo\mask.jpg" />
+    <Content Include="Photo\NJ\Nijisanji_logo.png" />
+    <Content Include="Photo\NJ\NJ01.png" />
+    <Content Include="Photo\NJ\NJ02.png" />
+    <Content Include="Photo\NJ\NJ03.png" />
+    <Content Include="Photo\NJ\NJ04.png" />
+    <Content Include="Photo\NJ\NJ05.png" />
+    <Content Include="Photo\NJ\NJ06.png" />
+    <Content Include="Photo\NJ\NJ07.png" />
+    <Content Include="Photo\NJ\NJ08.png" />
+    <Content Include="Photo\NJ\NJ09.png" />
+    <Content Include="Photo\NJ\NJ10.png" />
+    <Content Include="Photo\NJ\NJ11.png" />
+    <Content Include="Photo\NJ\NJ12.png" />
+    <Content Include="Photo\NJ\NJ13.png" />
+    <Content Include="Photo\NJ\NJ14.png" />
+    <Content Include="Photo\NJ\NJ15.png" />
+    <Content Include="Photo\NJ\NJ16.png" />
+    <Content Include="Photo\NJ\NJ17.png" />
+    <Content Include="Photo\NJ\NJ18.png" />
+    <Content Include="Photo\NJ\NJ19.png" />
+    <Content Include="Photo\NJ\NJ20.png" />
+    <Content Include="Photo\preloader.gif" />
+    <Content Include="Photo\test2.png" />
+    <Content Include="Photo\VTWiki-bg-bottom.jpg" />
+    <Content Include="Photo\VTWiki-bg-middle.jpg" />
+    <Content Include="Photo\VTWiki-bg-top.png" />
+    <Content Include="Photo\wiki-bg.jpg" />
+    <Content Include="Photo\wiki-img.jpg" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\dbVTModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbVTModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\dbVTModel.edmx.diagram">
+      <DependentUpon>dbVTModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\CustomScripts\owl.carousel.min.js" />
+    <Content Include="Scripts\CustomScripts\PageJs\_FrontPage_VTDis_Set.js" />
+    <Content Include="Scripts\CustomScripts\PageJs\_FrontPage_VTDis_About.js" />
+    <Content Include="Scripts\CustomScripts\PageJs\_FrontPage_VTWiki_People.js" />
+    <Content Include="Scripts\CustomScripts\PageJs\_FrontPage_VTWiki_Firm.js" />
+    <Content Include="Scripts\CustomScripts\PageJs\_FrontPage_VTWiki_Members.js" />
+    <Content Include="Scripts\CustomScripts\_Layout_DisIndex.js" />
+    <Content Include="Scripts\CustomScripts\_Layout_DisMuti.js" />
+    <Content Include="Scripts\CustomScripts\_Layout_Wiki.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\VTDiscovery.cshtml" />
+    <Content Include="Views\Home\DisMuti.cshtml" />
+    <Content Include="Views\Home\VTWiki_Firm.cshtml" />
+    <Content Include="Views\Shared\JP\_Layout_Wiki.cshtml" />
+    <Content Include="Views\Shared\JP\_Layout_DisIndex.cshtml" />
+    <Content Include="Views\Shared\JP\_Layout_DisMuti.cshtml" />
+    <Content Include="Views\Home\VTWiki.cshtml" />
+    <Content Include="Views\Home\VTWiki_People.cshtml" />
+    <Content Include="Views\Home\VTWiki_News.cshtml" />
+    <Content Include="Views\Home\VTWiki_Members.cshtml" />
+    <Content Include="Views\Home\VT_About.cshtml" />
+    <Content Include="Views\Home\VT_Video.cshtml" />
+    <Content Include="Views\Home\VT_Set.cshtml" />
+    <Content Include="Views\Shared\EN\_Layout_DisIndex.cshtml" />
+    <Content Include="Views\Shared\EN\_Layout_DisMuti.cshtml" />
+    <Content Include="Views\Shared\EN\_Layout_Wiki.cshtml" />
+    <Content Include="Views\Shared\_Layout_DisIndex.cshtml" />
+    <Content Include="Views\Shared\_Layout_DisMuti.cshtml" />
+    <Content Include="Views\Shared\_Layout_Wiki.cshtml" />
+    <Content Include="Views\EN\DisMuti.cshtml" />
+    <Content Include="Views\EN\VT_About.cshtml" />
+    <Content Include="Views\EN\VT_Set.cshtml" />
+    <Content Include="Views\EN\VT_Video.cshtml" />
+    <Content Include="Views\EN\VTDiscovery.cshtml" />
+    <Content Include="Views\EN\VTWiki.cshtml" />
+    <Content Include="Views\EN\VTWiki_Firm.cshtml" />
+    <Content Include="Views\EN\VTWiki_Members.cshtml" />
+    <Content Include="Views\EN\VTWiki_News.cshtml" />
+    <Content Include="Views\EN\VTWiki_People.cshtml" />
+    <Content Include="Views\JP\DisMuti.cshtml" />
+    <Content Include="Views\JP\VT_About.cshtml" />
+    <Content Include="Views\JP\VT_Set.cshtml" />
+    <Content Include="Views\JP\VT_Video.cshtml" />
+    <Content Include="Views\JP\VTDiscovery.cshtml" />
+    <Content Include="Views\JP\VTWiki.cshtml" />
+    <Content Include="Views\JP\VTWiki_Firm.cshtml" />
+    <Content Include="Views\JP\VTWiki_Members.cshtml" />
+    <Content Include="Views\JP\VTWiki_News.cshtml" />
+    <Content Include="Views\JP\VTWiki_People.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64828</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64828/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

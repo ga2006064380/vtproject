@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&family=Shrikhand&family=Tourney:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="lay-muti-bg-main">
+
+    <!-- 載入畫面 -->
+
+    <div class="lay-muti-preloader">
+        <img src="~/Photo/loading.gif" alt="preloader" class="preloader__item" />
+    </div>
+
+    <!-- 載入畫面 -->
+    <!-- 遮罩 -->
+
+    <div class="lay-muti-mask">
+
+    </div>
+
+    <!-- 遮罩 -->
+    <!-- 釋放 -->
+    <div class="lay-muti-down">
+        <button class="lay-muti-nav-down"><i class="fas fa-angle-down"></i></button>
+    </div>
+    <!-- 釋放 -->
+    <!-- 導覽列 -->
+
+    <div class="lay-muti-nav-bg">
+        <div class="lay-muti-nav-flex">
+            <div class="lay-muti-logo">
+                <button class="lay-muti-sidebar-toggle"><i class="fas fa-bars lay-muti-nav-i-bars"></i></button>
+                <span>實況直播</span>
+                <button class="lay-muti-nav-refresh"><i class="fas fa-redo-alt lay-muti-nav-i-refresh"></i></button>
+                <div><img class="lay-muti-nav-vt" src="https://yt3.ggpht.com/ytc/AKedOLTvS-8gomaJywaEKp3hnCmY92vQ9uKpy8rMAx3a=s48-c-k-c0x00ffffff-no-rj-mo" alt="Alternate Text" /></div>
+                <div><img class="lay-muti-nav-vt" src="https://yt3.ggpht.com/ytc/AKedOLTvS-8gomaJywaEKp3hnCmY92vQ9uKpy8rMAx3a=s48-c-k-c0x00ffffff-no-rj-mo" alt="Alternate Text" /></div>
+                <div><img class="lay-muti-nav-vt" src="https://yt3.ggpht.com/ytc/AKedOLTvS-8gomaJywaEKp3hnCmY92vQ9uKpy8rMAx3a=s48-c-k-c0x00ffffff-no-rj-mo" alt="Alternate Text" /></div>
+                <div><img class="lay-muti-nav-vt" src="https://yt3.ggpht.com/ytc/AKedOLTvS-8gomaJywaEKp3hnCmY92vQ9uKpy8rMAx3a=s48-c-k-c0x00ffffff-no-rj-mo" alt="Alternate Text" /></div>
+            </div>
+            <div class="lay-muti-nav-font">
+                <button class="lay-muti-nav-trash"><i class="fas fa-trash-alt"></i></button>
+                <button><i class="fas fa-compress"></i></button>
+                <button class="lay-muti-nav-up"><i class="fas fa-angle-up"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 導覽列 -->
+    <!-- 選單 -->
+
+    <div class="lay-muti-sidenav">
+        <ul>
+            <li class="lay-muti-side-btn">
+                <button class="lay-muti-side-search-btn"><i class="fas fa-search"></i></button>
+                <button><i class="fas fa-filter"></i></button>
+            </li>
+            <li class="lay-muti-side-search">
+                <input id="lay-muti-nav-search" class="side-input" type="text" placeholder="請輸入搜尋內容">
+            </li>
+            <li class="lay-muti-side-top">
+                <a href="/Home/VTDiscovery"><i class="fas fa-home"></i>VTDiscovery</a>
+            </li>
+            <li>
+                <a href="/Home/VTWiki"><i class="fas fa-book"></i>VTWiki</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-address-card"></i>關於本站</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-wrench"></i></i>網站設定</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 選單 -->
+
+
+    <div class="lay-muti-body-content">
+        @RenderBody()
+        @*<hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+            </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/CustomScripts/_Layout_DisMuti.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<VTWebsite.Models.VideoVtuber>
+
+@{
+    Layout = "~/Views/Shared/_Layout_DisIndex.cshtml";
+    ViewBag.Title = "VT_Video";
+    var n = 0;
+    var videohid = "https://www.youtube.com/embed/".ToString() + ViewBag.msgv + "?rel=0&autoplay=1";
+}
+
+<title>影片頁面 VT_video</title>
+
+<header class="video-header">
+    <div class='video-header-yt'>
+        <iframe src="@videohid"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </div>
+    <div class="video-header-yt-content">
+        @foreach (var item in Model)
+        {
+            if (ViewBag.msgv == item.video.yt_video_id.ToString())
+            {
+                <h3>
+                    @Html.DisplayFor(modelItem => item.video.title)
+                </h3>
+                <h4>@Html.DisplayFor(modelItem => item.video.published_at)</h4>
+            }
+        }
+    </div>
+</header>
+
+<section>
+    <div class="video-section">
+        <div class="video-section-flex">
+            <div class="video-secton-card-main">
+                <div class="video-section-title"><p class="">精華剪輯</p></div>
+                @foreach (var item in Model.Take(300))
+                {
+                    if (item.video.status.ToString() != "missing" && n <= 99)
+                    {
+                        var Videoid = @Html.DisplayFor(modelItem => item.video.yt_video_id).ToString();
+                        var Linkphoto = "http://img.youtube.com/vi/".ToString() + Videoid + "/hqdefault.jpg";
+                        var Linkvideo = "https://www.youtube.com/watch?v=".ToString() + Videoid;
+                        var name = "@Html.DisplayFor(modelItem => item.vtuber.yt_channel_name)";
+
+                        <div class="video-section-card-box">
+                            <a href="@Url.Action("VT_Video","Home",new { id = item.video.yt_video_id})"><img src="@Linkphoto" alt="@name" /></a>
+                            <div class="video-section-content">
+                                <div class="video-section-content-img">
+                                    <img class="video-section-channel-img" src="@Html.DisplayFor(modelItem => item.vtuber.photo)" alt="Alternate Text" />
+                                </div>
+                                <a href="@Url.Action("VT_Video","Home",new { id = item.video.yt_video_id})" class="video-section-content-font">
+
+                                    <h3>@Html.DisplayFor(modelItem => item.video.title)</h3>
+                                    <h4>@Html.DisplayFor(modelItem => item.vtuber.yt_channel_name)</h4>
+                                    <h4>@Html.DisplayFor(modelItem => item.video.published_at)</h4>
+
+                                </a>
+
+                            </div>
+                        </div>
+                        n += 1;
+                    }
+
+                }
+            </div>
+        </div>
+    </div>
+</section>

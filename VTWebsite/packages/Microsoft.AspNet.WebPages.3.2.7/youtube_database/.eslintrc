@@ -1,0 +1,23 @@
+{
+    "env": {
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "rules": {
+      "eqeqeq": "error",
+      "no-underscore-dangle": "off",
+      "max-len": ["error", 120, 2],
+      "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 4 }],
+      "object-curly-newline": "off",
+      "class-methods-use-this": "off",
+      "camelcase": "off",
+      "linebreak-style": "off",
+      "semi": ["error", "never"],
+      "comma-dangle": ["error", "never"],
+      "no-console": 0
+    }
+  }

@@ -1,0 +1,20 @@
+﻿@{
+    string ControllerName = Convert.ToString(HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"]);
+    switch (ControllerName.ToUpper())
+    {
+        case "Home":
+            Layout = "~/Views/Shared/_Layout_DisIndex.cshtml";
+            break;
+        case "EN":
+            Layout = "~/Views/Shared/EN/_Layout_DisIndex.cshtml";
+            break;
+        case "JP":
+            Layout = "~/Views/Shared/JP/_Layout_DisIndex.cshtml";
+            break;
+        default:
+            Layout = "~/Views/Shared/_Layout_Disindex.cshtml";
+            break;
+    }
+
+
+}

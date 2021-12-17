@@ -1,0 +1,457 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 0;
+}
+
+
+/* ------------------------------------preloader----------------------------------------- */
+
+.lay-Index-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../Photo/BK.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+}
+
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
+
+.preloader__item {
+    width: 40%;
+}
+
+.lay-Index-mask {
+    position: relative;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.add-mask {
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    transition-duration: 0.5s;
+    z-index:10;
+}
+
+/* ------------------------------------preloader----------------------------------------- */
+
+/* ------------------------------------bubble----------------------------------------- */
+.lay-Index-bubble {
+    background-image: url("../../Photo/lay-bubble.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index:2;
+}
+
+.lay-Index-bubble:hover .lay-Index-bubble-news{
+    display:block;
+}
+
+.lay-Index-bubble-news {
+    background-color: white;
+    position: fixed;
+    height: 400px;
+    width: 250px;
+    bottom: 55px;
+    right: 70px;
+    display: none;
+    border: 2px solid #00abd9;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    padding:5px 8px 0px;
+    border-radius:20px;
+}
+
+.lay-Index-bubble-dot {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border: none;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    overflow: hidden;
+    position: absolute;
+    right: -41px;
+    bottom: -1px;
+    display:none;
+}
+/* ------------------------------------bubble----------------------------------------- */
+
+/* ------------------------------------Nav----------------------------------------- */
+.lay-Index-bg-main {
+    background-color: #484545;
+    transition: 0.5s;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.lay-Index-nav-bg {
+    background-color: rgb(37, 37, 37);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    z-index:10;
+    height:60px;
+    transition:0.5s;
+}
+
+.lay-Index-logo {
+    font-size: 24px;
+    color: white;
+}
+
+.lay-Index-sidebar-toggle {
+    margin-right: 5px;
+    position: relative;
+    top: 5.5px;
+    background: transparent;
+    border-color: transparent;
+    color: white;
+    width: 40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.lay-Index-sidebar-toggle:hover {
+    background-color:#3c3c3c;
+}
+
+.lay-Index-logo > button > i {
+    font-size: 20px;
+    position:relative;
+    bottom:2.5px;
+}
+
+.lay-Index-logo > span {
+    font-weight: 800;
+    letter-spacing: 2px;
+    position: relative;
+    top: 3.5px;
+}
+
+.lay-Index-logo a {
+    color:white;
+}
+
+.lay-Index-logo a:hover {
+    text-decoration:none;
+}
+
+.lay-Index-nav-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-left: 1.28rem;
+    margin-right: 2rem;
+}
+
+/*.lay-Index-nav-font {
+    position: relative;
+    bottom: 3.5px;
+    margin-top: 13px;
+}*/
+
+#lay-Index-nav-search {
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 0.7rem;
+    font-size: 18px;
+    padding-left: 7px;
+    border: none;
+}
+
+.lay-Index-nav-link > a {
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    margin: 0rem 1.5rem;
+    align-self: stretch;
+    padding: 10px 0 10px;
+    font-size: 1rem;
+}
+
+.lay-Index-nav-link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.5px;
+}
+
+.lay-Index-nav-link > a:hover span {
+    background: #ffd800;
+    height: 4px;
+    width: auto;
+    position: relative;
+    bottom: -11px;
+    left: 3px;
+    display: block;
+    transition: background 0.3s ease 0s;
+}
+
+/*.lay-Index-nav-font > button {
+    background: #e6e3e3;
+    border: none;
+    border-radius: 4px;
+    color: rgb(37, 37, 37);
+    cursor: pointer;
+    height: 32px;
+    width: 30px;
+    margin-left: 7px;
+    position: relative;
+    bottom: 1px;
+}*/
+/*
+    .lay-Index-nav-font > button > i {
+        font-size: 20px;
+    }*/
+
+/* ------------------------------------Nav----------------------------------------- */
+
+
+/* ------------------------------------side-btn----------------------------------------- */
+
+.lay-Index-side-btn {
+    display: none;
+    text-align: right;
+}
+
+.lay-Index-side-search {
+    display: none;
+    margin-top: 10px;
+}
+
+.lay-Index-sidenav{
+    z-index:10;
+}
+
+.lay-Index-sidenav > ul > li > a > i {
+    margin-right: 10px;
+}
+
+
+/* ------------------------------------side-btn----------------------------------------- */
+
+
+/* ------------------------------------選單----------------------------------------- */
+
+.show-search {
+    display: block;
+}
+
+.lay-Index-sidenav > ul {
+    display: block;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+    .lay-Index-sidenav > ul > li > button {
+        background: transparent;
+        border: transparent;
+        color: #f1f1f1;
+        font-size: 20px;
+        padding-right: 12px;
+    }
+
+.lay-Index-side-filter{
+    margin-right:22px;
+}
+
+.lay-Index-sidenav a:hover {
+    background: #f1f1f1;
+    color: black;
+    transition: 0.5s;
+}
+
+.lay-Index-side-top {
+    border-top: 1.5px solid white;
+}
+
+.lay-Index-sidenav a {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 0.9rem;
+    font-size:1.25rem;
+}
+
+.lay-Index-sidenav i {
+    margin-left: 11px;
+}
+
+/* ------------------------------------選單----------------------------------------- */
+
+/* ------------------------------------Nav----------------------------------------- */
+
+@media (max-width: 640px) {
+    .preloader__item {
+        width: 130%;
+    }
+
+    .hidden-muti{
+        display:none;
+    }
+
+    .lay-Index-nav-bg {
+        height: 64px;
+    }
+
+    .lay-Index-nav-flex {
+        display: block;
+        margin-bottom: 3px;
+        margin-left: 1.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .lay-Index-logo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        font-size: 22px;
+        position: relative;
+        top: 6px;
+    }
+
+    .lay-Index-sidebar-toggle {
+        margin-right: 7px;
+        position: relative;
+        right:8px;
+        top:2px;
+    }
+
+    .lay-Index-logo > button > i {
+        font-size: 22px;
+        bottom:0.5px;
+    }
+
+    .lay-Index-logo > span {
+        position: relative;
+        top: 4px;
+    }
+
+    .lay-Index-nav-font {
+        display: none;
+    }
+    /* ------------------------------------Nav----------------------------------------- */
+
+    /* ------------------------------------選單----------------------------------------- */
+    .lay-Index-side-btn {
+        margin-top: 6px;
+        margin-right:1.3rem;
+        display: block;
+    }
+
+    .lay-Index-side-top {
+        margin-top: 0.5rem;
+    }
+
+    .lay-Index-sidenav {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(37, 37, 37);
+        position: fixed;
+        top: 3.7rem;
+        transition: 0.5s;
+        transform: translate(-100%);
+    }
+
+    .show-sidebar {
+        transform: translate(0);
+    }
+
+    .lay-Index-body-content {
+        margin-left: 0;
+        margin-top: 64px;
+    }
+
+    .lay-Index-side-link {
+        display: inline-block;
+    }
+
+    .lay-Index-nav-link {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 676px) {
+    .lay-Index-sidenav {
+        height: 100%;
+        width: 80px;
+        font-size: 1.1rem;
+        background-color: rgb(37, 37, 37);
+        position: fixed;
+        top: 3.7rem;
+        border-right: 1px solid #0000001f;
+    }
+
+    .show-sidebar {
+        transform: translate(0);
+    }
+
+    .lay-Index-sidenav > ul > li > button {
+        display: block;
+    }
+
+    #lay-Index-nav-search {
+        background: #e6e3e3;
+        font-size: 18px;
+        height: 2rem;
+        border: none;
+        border-radius: 4px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 20rem;
+    }
+
+    .lay-Index-body-content {
+        margin-left: 90px;
+        /*margin-right: 30px;*/
+        margin-right: 10px;
+        margin-top: 60px;
+    }
+
+    .lay-Index-side-link {
+        display: none;
+    }
+}
+
+/*---------------------------------------------*/
+
+ul {
+    padding-left: 0rem;
+}
+
+input {
+    max-width: 100%;
+}
+
+
+/*---------------------------------------------*/

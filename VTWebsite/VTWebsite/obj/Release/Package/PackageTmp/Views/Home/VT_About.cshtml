@@ -1,0 +1,165 @@
+﻿@model IEnumerable<VTWebsite.Models.tToDo>
+
+@{
+    Layout = "~/Views/Shared/_Layout_DisIndex.cshtml";
+    ViewBag.Title = "VT_About";
+    int no = 1;
+    string str1;
+}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Shrikhand&family=Tourney:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<title>關於本站 VT_About</title>
+
+<header class="about-header">
+    <div><h2>關於本站</h2></div>
+    <div class="about-content-flex">
+        <div class="about-content-purpose">
+            <h3>成立目的</h3>
+            <h4>
+                本網站的目的在於整合目前主流的兩大 VTuber 公司”Hololive”與”にじさんじ”的資訊，減少使用者的搜尋成本，並加入直播及精華剪輯的影片，使更多人認識 VTuber，當前並未有將 VTuber 直播與 VTuber 相關資訊與介紹整合在一起的網站，也許使用者觀看直播後對 VTuber有所興趣，卻因為網路上的資訊參差不齊，又或者因為語言問題而放棄對VTuber 的搜尋。
+            </h4>
+            <h4>這些問題可能會減少初次聽過 VTuber 的觀看者對VTuber 的熱情，所以本專題打算利用多視窗直播功能與 VT 百科將影片與資訊整合，此外我們也加入中文、英文及日文語言切換的功能，減少使用者因為語言隔閡而放棄對 VTuber 搜尋的問題，提供資深 VTuber 粉絲及 VTuber 入門者一個整合網站，使更多人了解 VTuber 這一產業。</h4>
+        </div>
+        <div class="about-content-thanks">
+            <h3>指導教授(銘謝)</h3>
+            <h4>
+                本網站之所以能夠順利完成，最應感謝的是本組的指導老師—侯雍聰教授，在擬定專題題目時，細心的引導我們，從題目的決定到程式碼撰寫以及網頁內容的設計，提供許多寶貴的建議，遇到問題時提供協助，讓我們克服研究過程中所面臨的困難，並給予不斷的指導及鼓勵，才能讓本專題得以在時限內順利完成。
+            </h4>
+        </div>
+        <div class="about-content-developer">
+            <h3>開發人員</h3>
+            <p>國立虎尾科技大學&nbsp;資訊管理系四年級</p>
+            <hr />
+            <h4>40741114&nbsp;吳青賢</h4>
+            <h4>40741116&nbsp;吳偉菖</h4>
+            <h4>40741142&nbsp;黃睿豪</h4>
+            <h4>40741149&nbsp;鄭瑞成</h4>
+        </div>
+        <div class="about-content-question">
+            <h3>常見問題</h3>
+            <div class="about-content-question-flex">
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>為何某些頁面的載入時間這麼久？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">由於某些頁面的圖片皆是由YouTube抓取，且伺服器設備的網速不快，所以載入時間會稍長，我們將會盡快解決問題！</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>為何點擊影片時沒有反應？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">影片由後端從YouTube抓取資料，一旦連結出錯或無法抓取成功將會導致錯誤，我們將會盡速修正，還望海函。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>請問有Android/iOS版本的VTDiscovery的應用程式嗎？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">移動裝置上的應用程式版本尚未開發，網站有部分功能還未完善，當網站功能設計較為完整時我們將會考慮開發APP版本。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>VTWiki的頁面有什麼功能？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">VTWiki主要整理VTuber的各項資訊，並盡力將其資料補齊，且內容也包含日本兩大虛擬實況主公司的簡介，在使用者觀看人物資訊時便能對該名VTuber與其所屬公司有基本的了解。</p>
+                    </div>
+                </div>
+                
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>為何直播影片會卡頓？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">觀看直播影片時會卡頓有多種可能性，第一種---使用者的電腦配備效能不夠好，由於直播影片的觀看人數較多，要求效能也較高，未達最低需求可能造成卡頓，第二種---使用者網速不夠快也可能導致觀看影片時卡頓。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>我能在哪裡觀看到VTuber的相關資訊呢？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">VTDiscovery首頁的上方導覽列與左方側邊欄有VTWiki連結，點擊後連結至VTWiki首頁，上方導覽頁有人物介紹頁面，進入後有兩大公司旗下VTuber圖像，點擊後即可觀看某VTuber人物的相關資訊。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>為何更改網站設定時沒有反應？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">使用者第一步驟請先重啟網頁或重新整理，若還是沒辦法請聯繫我們開發人員，我們將會盡快改善，給使用者最好的體驗。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-content-three">
+            <div class="about-content-contact">
+                <h3>聯絡方式</h3>
+                <p>開發人員1--電子郵件：40741114@gmail.com</p>
+                <p>開發人員2--電子郵件：40741116@gmail.com</p>
+                <p>開發人員3--電子郵件：40741142@gmail.com</p>
+                <p>開發人員4--電子郵件：40741149@gmail.com</p>
+            </div>
+            <div class="about-content-link">
+                <h3>相關連結</h3>
+                <p>Hololive Production公司：<a href="https://en.hololive.tv">https://en.hololive.tv</a></p>
+                <p>Nijisanji公司：<a href="https://www.nijisanji.jp/en">https://www.nijisanji.jp/en</a></p>
+                <p>Nijisanji公司新網站連結：<a href="https://www.anycolor.co.jp/en">https://www.anycolor.co.jp/en</a></p>
+            </div>
+            <div class="about-content-update">
+                <h3>更新日誌</h3>
+
+
+
+                <div class="set-ac-fr" id="accordion">
+                    @foreach (var item in Model)
+                    {
+                        str1 = "collapse" + no;
+                        <div class="card set-ac-card">
+                            <div class="card-header set-ac-header collapsed" data-toggle="collapse" data-target="#@str1" aria-expanded="false" aria-controls="@str1">
+                                <span class="set-ac-time">@DateTime.Parse(item.fDate.ToString()).ToString("yyyy/M/d ")</span>
+                                <span class="title set-ac-btn-title">@Html.DisplayFor(modelItem => item.fTitle)</span>
+                                <span class="accicon set-ac-icon"><i class="fas fa-angle-down rotate-icon set-ac-icon-item"></i></span>
+                            </div>
+
+                            <div id="@str1" class="collapse set-ac-colpse" data-parent="#accordion">
+                                <div class="set-ac-colpse-cd-body">
+                                    <p>
+                                        @Html.DisplayFor(modelitem => item.fText)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        no = no + 1;
+                    }
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a91a27e46f.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

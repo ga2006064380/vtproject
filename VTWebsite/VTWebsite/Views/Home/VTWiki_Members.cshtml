@@ -1,0 +1,87 @@
+﻿@model IEnumerable<VTWebsite.Models.MembersIntro>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_Wiki.cshtml";
+}
+<title>人物資訊頁面 VTWiki_Members</title>
+
+<div class="wiki-members-body">
+    @foreach (var item in Model)
+    {
+
+        if (ViewBag.yt_channel_name == item.member.tName)
+        {
+            var yt = @Html.DisplayFor(Modelitem => item.intro.YTpath).ToString();
+            var tw = @Html.DisplayFor(Modelitem => item.intro.Twitterpath).ToString();
+            var web = @Html.DisplayFor(Modelitem => item.intro.webpath).ToString();
+            <h1 class="wiki-members-fonts"> @Html.DisplayFor(modelitem => item.member.tName)</h1>
+            @*<h1 class="wiki-members-HL">Hololive</h1>*@
+            <h1 class="wiki-members-NJ">@ViewBag.org</h1>
+            <div class="wiki-members-flex">
+                <div class="wiki-members-img"><img src="~/Photo/FullBody/@item.intro.bgpath" alt="Alternate Text" /></div>
+                <div class="wiki-members-imgbg"><img src="~/Photo/FullBody/@item.intro.bgpath" alt="Alternate Text" /></div>
+                <div class="wiki-members-content">
+                    <div class="wiki-members-icon">
+                        <button class="wiki-members-youtube"onclick="window.open('@yt', '_blank')"><i class="fab fa-youtube"></i></button>
+                        <button class="wiki-members-twitter"onclick="window.open('@tw', '_blank')"><i class="fab fa-twitter"></i></button>
+                        <button class="wiki-members-globe"onclick="window.open('@web', '_blank')" ><i class="fas fa-globe-americas"></i></button>
+                    </div>
+                    <div class="wiki-members-tab">
+                        <button class="wiki-members-btn active" data-id="official">官方訊息</button>
+                        <button class="wiki-members-btn" data-id="intro">人物介紹</button>
+                        <button class="wiki-members-btn" data-id="information">個人資料</button>
+                    </div>
+
+                    <div class="wiki-members-official wiki-members-tab-content active" id="official">
+                        <h3>@Html.DisplayFor(modelitem => item.member.tTitle)</h3>
+                        <h2>@Html.DisplayFor(modelitem => item.member.tjpName)</h2>
+                        <p>
+                            @Html.DisplayFor(modelitem => item.intro.iSpecial)<br /><br />
+                            <span class="wiki-members-official-fl">初配信</span>
+                        </p>
+                        <iframe width="560" height="315" src="@item.intro.iStream" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="wiki-members-intro wiki-members-tab-content" id="intro">
+                        <h3>@Html.DisplayFor(modelitem => item.member.tTitle)</h3>
+                        <h2>@Html.DisplayFor(modelitem => item.member.tjpName)</h2>
+                        <p>@Html.DisplayFor(modelitem => item.intro.iRole)</p>
+                        <h2>成名歷程</h2>
+                        <p>@Html.DisplayFor(modelitem => item.intro.iFame)</p>
+                    </div>
+
+                    <div class="wiki-members-information wiki-members-tab-content" id="information">
+                        <h3>@Html.DisplayFor(modelitem => item.member.tTitle)</h3>
+                        <h2>@Html.DisplayFor(modelitem => item.member.tjpName)<span>( @Html.DisplayFor(modelitem => item.member.tLanguage))</span></h2>
+                        <div class="wiki-members-information-flex">
+                            <div class="wiki-members-information-grid-top">
+                                <div class="wiki-members-grid-top-left">
+                                    <p>綽號：@Html.DisplayFor(modelitem => item.member.tNick)</p>
+                                    <p>性別：@Html.DisplayFor(modelitem => item.member.tSex)</p>
+                                    <span>身高：@Html.DisplayFor(modelitem => item.member.tHeight)cm</span>
+                                </div>
+                                <div class="wiki-members-grid-top-right">
+                                    <p>年齡：@Html.DisplayFor(modelitem => item.member.tAge)</p>
+                                    <p>生日：@DateTime.Parse(item.member.tBirth.ToString()).ToString(" M 月 d 日")</p>
+                                    <span>星座：@Html.DisplayFor(modelitem => item.member.tStar)</span>
+                                </div>
+                            </div>
+                            <div class="wiki-members-information-grid-bottom">
+                                <div class="wiki-members-grid-bottom-left">
+                                    <p>喜歡的東西：</p>
+                                    <span>@Html.DisplayFor(modelitem => item.member.tInterest)</span>
+                                </div>
+                                <div class="wiki-members-grid-bottom-right">
+                                    <p>討厭的東西：</p>
+                                    <span>@Html.DisplayFor(modelitem => item.member.tHate)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    }
+</div>

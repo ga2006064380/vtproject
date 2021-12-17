@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="color-scheme" content="light dark">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&family=Shrikhand&family=Tourney:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="lay-Index-bg-main">
+
+    <!-- 載入畫面 -->
+
+    <div class="lay-Index-preloader">
+        <img src="~/Photo/loading.gif" alt="preloader" class="preloader__item" />
+    </div>
+
+    <!-- 載入畫面 -->
+    <!-- 遮罩 -->
+
+    <div class="lay-Index-mask"></div>
+
+    <!-- 遮罩 -->
+    <!-- 右下角泡泡框 -->
+    @*<div class="lay-Index-bubble">
+            <div class="lay-Index-bubble-news">
+                <span class="lay-Index-bubble-dot"></span>
+                <p>
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    enables a clean separation of concerns and gives you full control over markup
+                    for enjoyable, agile development.
+                </p>
+            </div>
+        </div>*@
+    <!-- 右下角泡泡框 -->
+    <!-- 導覽列 -->
+
+    <div class="lay-Index-nav-bg">
+        <div class="lay-Index-nav-flex">
+            <div class="lay-Index-logo">
+                <button class="lay-Index-sidebar-toggle"><i class="fas fa-bars"></i></button>
+                <span><a href="/Home/VTDiscovery">VTDiscovery</a></span>
+            </div>
+
+            <div class="lay-Index-nav-link">
+                <a href="/Home/VTWiki">VTWiki<span></span></a>
+                <a href="/Home/DisMuti">實況直播<span></span></a>
+                <a href="/Home/VT_About">關於本站<span></span></a>
+                <a href="/Home/VT_Set">網站設定<span></span></a>
+            </div>
+
+
+
+            @*<div class="lay-Index-nav-font">
+                    <input id="lay-Index-nav-search" type="text">
+                    <button><i class="fas fa-search"></i></button>
+                    <button><i class="fas fa-filter"></i></button>
+                </div>*@
+        </div>
+    </div>
+
+    <!-- 導覽列 -->
+    <!-- 選單 -->
+
+    <div class="lay-Index-sidenav">
+        <ul>
+            <li class="lay-Index-side-btn">
+                <button class="lay-Index-side-search-btn"><i class="fas fa-search"></i></button>
+                <button><i class="fas fa-filter"></i></button>
+            </li>
+            <li class="lay-Index-side-search">
+                <input id="lay-Index-nav-search" type="text" placeholder="請輸入搜尋內容">
+            </li>
+            <li class="lay-Index-side-top">
+                <a href="/Home/VTDiscovery"><i class="fas fa-home"></i><span class="lay-Index-side-link">首頁</span></a>
+            </li>
+            <li>
+                <a href="/Home/VTWiki"><i class="fas fa-book"></i><span class="lay-Index-side-link">VTWiki</span></a>
+            </li>
+            <li class="hidden-muti">
+                <a href="/Home/DisMuti"><i class="fas fa-desktop"></i><span class="lay-Index-side-link">實況直播</span></a>
+            </li>
+            <li>
+                <a href="/Home/VT_About"><i class="fas fa-address-card"></i><span class="lay-Index-side-link">關於本站</span></a>
+            </li>
+            <li>
+                <a href="/Home/VT_Set"><i class="fas fa-wrench"></i><span class="lay-Index-side-link">網站設定</span></a>
+            </li>
+        </ul>
+    </div>
+
+    @*<label class="dark-toggle">
+        <input class="dark-toggle-checkbox" type="checkbox">
+        <a class="dark-toggle-switch"></a>
+    </label>*@
+
+    <!-- 選單 -->
+
+
+    <div class="lay-Index-body-content">
+        @RenderBody()
+        @*<hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+            </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/CustomScripts/PageJs/_FrontPage_VTDis_About.js"></script>
+    <script src="~/Scripts/CustomScripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/CustomScripts/PageJs/_FrontPage_VTDis_Set.js"></script>
+</body>
+</html>

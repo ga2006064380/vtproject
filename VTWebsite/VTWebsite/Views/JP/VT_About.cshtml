@@ -1,0 +1,167 @@
+﻿@model IEnumerable<VTWebsite.Models.tToDo_jp>
+
+@{
+    Layout = "~/Views/Shared/JP/_Layout_DisIndex.cshtml";
+    ViewBag.Title = "VT_About";
+    int no = 1;
+    string str1;
+}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Shrikhand&family=Tourney:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<title>このサイトについて VT_About</title>
+
+<header class="about-header">
+    <div><h2>このサイトについて</h2></div>
+    <div class="about-content-flex">
+        <div class="about-content-purpose">
+            <h3>設立の目的</h3>
+            <h4>
+                本サイトの目的は、VTuberの大手2社「ホロライブ」と「二十三支」の情報を統合し、ユーザーの検索コストを削減すること、そしてライブ配信やハイライト動画を追加し、より多くの人にVTuberを知ってもらうことです。VTuberのライブ配信とVTuber関連の情報・紹介を統合したサイトはありません。 ライブ配信を見てVTuberに興味を持っても、ネット上の情報が偏っていたり、言語の問題でVTuberの検索を諦めている人もいるのではないでしょうか。
+            </h4>
+            <h4>
+                これらの問題は、初めてVTuberを見る人の熱意を低下させる可能性があるため、本プロジェクトでは、マルチウィンドウライブ配信機能やVTエンサイクロペディアを利用して、動画と情報を統合することを意図しています。また、中国語、英語、日本語の言語切り替え機能を追加することで、言語の壁によってVTuberの検索を諦めるという問題を軽減します。また、中国語、英語、日本語の切り替え機能を追加し、ユーザーがVTuberを検索する際に生じる言語の壁を軽減しました。
+            </h4>
+        </div>
+        <div class="about-content-thanks">
+            <h3>監修教授（謝辞）</h3>
+            <h4>
+                指導教官のYongcong Hou教授には、テーマの決定からコードの記述、ウェブページのコンテンツのデザインに至るまで、丁寧にご指導いただき、問題が発生した際には貴重なアドバイスと支援をいただき、研究過程で直面した困難を克服することができ、常にご指導をいただきました。 そのおかげで、今回のプロジェクトを期間内に完了することができました。
+            </h4>
+        </div>
+        <div class="about-content-developer">
+            <h3>開発者</h3>
+            <p>国立フーイ科学技術大学&nbsp;情報管理学科 4年目</p>
+            <hr />
+            <h4>40741114&nbsp;吳青賢</h4>
+            <h4>40741116&nbsp;吳偉菖</h4>
+            <h4>40741142&nbsp;黃睿豪</h4>
+            <h4>40741149&nbsp;鄭瑞成</h4>
+        </div>
+        <div class="about-content-question">
+            <h3>よくあるご質問</h3>
+            <div class="about-content-question-flex">
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>読み込みに時間がかかるページがあるのはなぜですか？？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">一部のページでは、YouTubeで撮影した画像を使用しているため、サーバーの速度があまり速くなく、読み込みに少し時間がかかります。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>動画をクリックしても反応がないのはなぜですか？？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">ビデオはYouTubeからバックエンドによってクロールされます。リンクが間違っていたり、正常にクロールできなかったりすると、エラーが発生しますが、できるだけ早く修正します。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>VTDiscoveryアプリのAndroid/iOS版はありますか？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">モバイル機器向けのアプリ版はまだ開発されておらず、ウェブサイトの一部の機能は完成していません。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>VTWikiページの特徴は何ですか？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">VTWikiは、VTuberに関する情報をまとめたもので、極力完成度を高めています。 また、日本のバーチャルリアリティ関連企業のうち、主要な2社のプロフィールを掲載しており、プロフィールを見ながらVTuberとその企業についての基本的な理解を深めることができます。</p>
+                    </div>
+                </div>
+                
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>なぜライブ映像は遅れるのか？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">ライブ映像を視聴する際には、いくつかの可能性が考えられます。まず、ユーザーのパソコンに十分な性能が備わっていないことが挙げられます。ライブ映像は視聴者数が多く、必要とされる性能も高いため、最低限の要件を満たしていないと映像が遅れてしまうことがあります。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>VTuberの情報はどこで見ることができますか？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">VTDiscoveryのホームページでは、上部のナビゲーションバーと左のサイドバーにVTWikiへのリンクがあり、これをクリックするとVTWikiのホームページにリンクします。上部のナビゲーションページにはプロフィールページがあり、入ると両社のVTuberの画像がありますので、これをクリックするとVTuberの情報が表示されます。</p>
+                    </div>
+                </div>
+
+                <div class="about-content-questionAll">
+                    <button class="about-question-btn">
+                        <span>設定を変更しても反応がないのはなぜ？</span>
+                        <i class="fas fa-angle-down about-content-questionAll-I"></i>
+                    </button>
+                    <div class="about-question-div">
+                        <p class="about-question-div-p">それでもうまくいかない場合は、開発者にご連絡いただければ、ユーザーの皆様に最高の体験をしていただけるよう、早急に改善いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-content-three">
+            <div class="about-content-contact">
+                <h3>連絡方法</h3>
+                <p>デベロッパー1--Email：40741114@gmail.com</p>
+                <p>デベロッパー2--Email：40741116@gmail.com</p>
+                <p>デベロッパー3--Email：40741142@gmail.com</p>
+                <p>デベロッパー4--Email：40741149@gmail.com</p>
+            </div>
+            <div class="about-content-link">
+                <h3>関連リンク</h3>
+                <p>Hololive Production会社：<a href="https://en.hololive.tv">https://en.hololive.tv</a></p>
+                <p>Nijisanji会社：<a href="https://www.nijisanji.jp/en">https://www.nijisanji.jp/en</a></p>
+                <p>Nijisanji会社の新しいウェブサイトのリンク：<a href="https://www.anycolor.co.jp/en">https://www.anycolor.co.jp/en</a></p>
+            </div>
+            <div class="about-content-update">
+                <h3>更新ログ</h3>
+
+
+
+                <div class="set-ac-fr" id="accordion">
+                    @foreach (var item in Model)
+                    {
+                        str1 = "collapse" + no;
+                        <div class="card set-ac-card">
+                            <div class="card-header set-ac-header collapsed" data-toggle="collapse" data-target="#@str1" aria-expanded="false" aria-controls="@str1">
+                                <span class="set-ac-time">@DateTime.Parse(item.fDate.ToString()).ToString("yyyy/M/d ")</span>
+                                <span class="title set-ac-btn-title">@Html.DisplayFor(modelItem => item.fTitle)</span>
+                                <span class="accicon set-ac-icon"><i class="fas fa-angle-down rotate-icon set-ac-icon-item"></i></span>
+                            </div>
+
+                            <div id="@str1" class="collapse set-ac-colpse" data-parent="#accordion">
+                                <div class="set-ac-colpse-cd-body">
+                                    <p>
+                                        @Html.DisplayFor(modelitem => item.fText)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        no = no + 1;
+                    }
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a91a27e46f.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

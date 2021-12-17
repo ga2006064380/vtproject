@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbVTModelStoreContainer" CdmEntityContainer="dbVTEntities">
+    <EntitySetMapping Name="Live_List">
+      <EntityTypeMapping TypeName="dbVTModel.Live_List">
+        <MappingFragment StoreEntitySet="Live_List">
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="published_at" ColumnName="published_at" />
+          <ScalarProperty Name="viewer_Count" ColumnName="viewer_Count" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="yt_video_id" ColumnName="yt_video_id" />
+          <ScalarProperty Name="yt_channel_id" ColumnName="yt_channel_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Member_List">
+      <EntityTypeMapping TypeName="dbVTModel.Member_List">
+        <MappingFragment StoreEntitySet="Member_List">
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="org" ColumnName="org" />
+          <ScalarProperty Name="yt_channel_name" ColumnName="yt_channel_name" />
+          <ScalarProperty Name="yt_id" ColumnName="yt_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tIntro">
+      <EntityTypeMapping TypeName="dbVTModel.tIntro">
+        <MappingFragment StoreEntitySet="tIntro">
+          <ScalarProperty Name="webpath" ColumnName="webpath" />
+          <ScalarProperty Name="Twitterpath" ColumnName="Twitterpath" />
+          <ScalarProperty Name="YTpath" ColumnName="YTpath" />
+          <ScalarProperty Name="tMemberId" ColumnName="tMemberId" />
+          <ScalarProperty Name="bgpath" ColumnName="bgpath" />
+          <ScalarProperty Name="iStream" ColumnName="iStream" />
+          <ScalarProperty Name="iSpecial" ColumnName="iSpecial" />
+          <ScalarProperty Name="iFame" ColumnName="iFame" />
+          <ScalarProperty Name="iRole" ColumnName="iRole" />
+          <ScalarProperty Name="iId" ColumnName="iId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tIntro_en">
+      <EntityTypeMapping TypeName="dbVTModel.tIntro_en">
+        <MappingFragment StoreEntitySet="tIntro_en">
+          <ScalarProperty Name="tMemberId" ColumnName="tMemberId" />
+          <ScalarProperty Name="bgpath" ColumnName="bgpath" />
+          <ScalarProperty Name="iStream" ColumnName="iStream" />
+          <ScalarProperty Name="iSpecial" ColumnName="iSpecial" />
+          <ScalarProperty Name="iFame" ColumnName="iFame" />
+          <ScalarProperty Name="iRole" ColumnName="iRole" />
+          <ScalarProperty Name="iId" ColumnName="iId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tIntro_jp">
+      <EntityTypeMapping TypeName="dbVTModel.tIntro_jp">
+        <MappingFragment StoreEntitySet="tIntro_jp">
+          <ScalarProperty Name="tMemberId" ColumnName="tMemberId" />
+          <ScalarProperty Name="bgpath" ColumnName="bgpath" />
+          <ScalarProperty Name="iStream" ColumnName="iStream" />
+          <ScalarProperty Name="iSpecial" ColumnName="iSpecial" />
+          <ScalarProperty Name="iFame" ColumnName="iFame" />
+          <ScalarProperty Name="iRole" ColumnName="iRole" />
+          <ScalarProperty Name="iId" ColumnName="iId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMember">
+      <EntityTypeMapping TypeName="dbVTModel.tMember">
+        <MappingFragment StoreEntitySet="tMember">
+          <ScalarProperty Name="tMemberId" ColumnName="tMemberId" />
+          <ScalarProperty Name="tLanguage" ColumnName="tLanguage" />
+          <ScalarProperty Name="tAge" ColumnName="tAge" />
+          <ScalarProperty Name="tStar" ColumnName="tStar" />
+          <ScalarProperty Name="tHate" ColumnName="tHate" />
+          <ScalarProperty Name="tInterest" ColumnName="tInterest" />
+          <ScalarProperty Name="tHeight" ColumnName="tHeight" />
+          <ScalarProperty Name="tBirth" ColumnName="tBirth" />
+          <ScalarProperty Name="tSex" ColumnName="tSex" />
+          <ScalarProperty Name="tNick" ColumnName="tNick" />
+          <ScalarProperty Name="tTitle" ColumnName="tTitle" />
+          <ScalarProperty Name="tjpName" ColumnName="tjpName" />
+          <ScalarProperty Name="tName" ColumnName="tName" />
+          <ScalarProperty Name="tId" ColumnName="tId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMember_en">
+      <EntityTypeMapping TypeName="dbVTModel.tMember_en">
+        <MappingFragment StoreEntitySet="tMember_en">
+          <ScalarProperty Name="tMemberId" ColumnName="tMemberId" />
+          <ScalarProperty Name="tLanguage" ColumnName="tLanguage" />
+          <ScalarProperty Name="tAge" ColumnName="tAge" />
+          <ScalarProperty Name="tStar" ColumnName="tStar" />
+          <ScalarProperty Name="tHate" ColumnName="tHate" />
+          <ScalarProperty Name="tInterest" ColumnName="tInterest" />
+          <ScalarProperty Name="tHeight" ColumnName="tHeight" />
+          <ScalarProperty Name="tBirth" ColumnName="tBirth" />
+          <ScalarProperty Name="tSex" ColumnName="tSex" />
+          <ScalarProperty Name="tNick" ColumnName="tNick" />
+          <ScalarProperty Name="tTitle" ColumnName="tTitle" />
+          <ScalarProperty Name="tjpName" ColumnName="tjpName" />
+          <ScalarProperty Name="tName" ColumnName="tName" />
+          <ScalarProperty Name="tId" ColumnName="tId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMember_jp">
+      <EntityTypeMapping TypeName="dbVTModel.tMember_jp">
+        <MappingFragment StoreEntitySet="tMember_jp">
+          <ScalarProperty Name="tMemberId" ColumnName="tMemberId" />
+          <ScalarProperty Name="tLanguage" ColumnName="tLanguage" />
+          <ScalarProperty Name="tAge" ColumnName="tAge" />
+          <ScalarProperty Name="tStar" ColumnName="tStar" />
+          <ScalarProperty Name="tHate" ColumnName="tHate" />
+          <ScalarProperty Name="tInterest" ColumnName="tInterest" />
+          <ScalarProperty Name="tHeight" ColumnName="tHeight" />
+          <ScalarProperty Name="tBirth" ColumnName="tBirth" />
+          <ScalarProperty Name="tSex" ColumnName="tSex" />
+          <ScalarProperty Name="tNick" ColumnName="tNick" />
+          <ScalarProperty Name="tTitle" ColumnName="tTitle" />
+          <ScalarProperty Name="tjpName" ColumnName="tjpName" />
+          <ScalarProperty Name="tName" ColumnName="tName" />
+          <ScalarProperty Name="tId" ColumnName="tId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tToDo">
+      <EntityTypeMapping TypeName="dbVTModel.tToDo">
+        <MappingFragment StoreEntitySet="tToDo">
+          <ScalarProperty Name="fDate" ColumnName="fDate" />
+          <ScalarProperty Name="fText" ColumnName="fText" />
+          <ScalarProperty Name="fTitle" ColumnName="fTitle" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tToDo_en">
+      <EntityTypeMapping TypeName="dbVTModel.tToDo_en">
+        <MappingFragment StoreEntitySet="tToDo_en">
+          <ScalarProperty Name="fDate" ColumnName="fDate" />
+          <ScalarProperty Name="fText" ColumnName="fText" />
+          <ScalarProperty Name="fTitle" ColumnName="fTitle" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tToDo_jp">
+      <EntityTypeMapping TypeName="dbVTModel.tToDo_jp">
+        <MappingFragment StoreEntitySet="tToDo_jp">
+          <ScalarProperty Name="fDate" ColumnName="fDate" />
+          <ScalarProperty Name="fText" ColumnName="fText" />
+          <ScalarProperty Name="fTitle" ColumnName="fTitle" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Video_List">
+      <EntityTypeMapping TypeName="dbVTModel.Video_List">
+        <MappingFragment StoreEntitySet="Video_List">
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="published_at" ColumnName="published_at" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="yt_video_id" ColumnName="yt_video_id" />
+          <ScalarProperty Name="yt_channel_id" ColumnName="yt_channel_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VTuber_List">
+      <EntityTypeMapping TypeName="dbVTModel.VTuber_List">
+        <MappingFragment StoreEntitySet="VTuber_List">
+          <ScalarProperty Name="crawled_at" ColumnName="crawled_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="subscriber_count" ColumnName="subscriber_count" />
+          <ScalarProperty Name="twitter" ColumnName="twitter" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="suborg" ColumnName="suborg" />
+          <ScalarProperty Name="org" ColumnName="org" />
+          <ScalarProperty Name="yt_channel_name" ColumnName="yt_channel_name" />
+          <ScalarProperty Name="yt_channel_id" ColumnName="yt_channel_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tweet_List">
+      <EntityTypeMapping TypeName="dbVTModel.Tweet_List">
+        <MappingFragment StoreEntitySet="Tweet_List">
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="tweet_created_at" ColumnName="tweet_created_at" />
+          <ScalarProperty Name="tweetsid" ColumnName="tweetsid" />
+          <ScalarProperty Name="twitterid" ColumnName="twitterid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

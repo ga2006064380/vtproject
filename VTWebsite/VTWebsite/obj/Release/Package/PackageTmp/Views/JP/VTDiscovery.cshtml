@@ -1,0 +1,130 @@
+﻿@model IEnumerable<VTWebsite.Models.VideoVtuber>
+@{
+    Layout = "~/Views/Shared/JP/_Layout_DisIndex.cshtml";
+    var n = 0;
+    var headn = 0;
+}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VTDiscovery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/Content/CustomCSS/PageCss/_FrontPage_VTDis_Main.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="VTDis-title">
+        <p>ライブビデオ</p>
+    </div>
+    <div class="owl-flex">
+        <div class="owl-Body">
+            <div class="owl-carousel owl-theme">
+                @foreach (var item2 in Model.Take(200))
+                {
+                    if (item2.video.status != "missing" && headn <= 4)
+                    {
+                        var Videoid2 = @Html.DisplayFor(modelItem => item2.video.yt_video_id).ToString();
+                        var Linkvideo2 = "https://www.youtube.com/watch?v=" + Videoid2;
+                        <div class="item-video"><a class="owl-video" href="@Linkvideo2"></a></div>
+                        headn += 1;
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="VTDis-gd-title">
+        <p>おすすめ動画</p>
+    </div>
+    <div class="card-flex">
+        <div class="card-main">
+            @foreach (var item in Model.Take(300))
+            {
+
+                if (item.video.status.ToString() != "missing" && n <= 99)
+                {
+                    var Videoid = @Html.DisplayFor(modelItem => item.video.yt_video_id).ToString();
+                    var Linkphoto = "https://img.youtube.com/vi/".ToString() + Videoid + "/hqdefault.jpg";
+                    var Linkvideo = "https://www.youtube.com/watch?v=".ToString() + Videoid;
+                    var statue = @Html.DisplayFor(modelItem => item.video.status).ToString();
+
+                    <div class="card-box">
+                        <div class="card">
+                            <a href="@Url.Action("VT_Video","JP",new { id = item.video.yt_video_id})">
+                                <div class="card-img-md">
+                                    <img class="card-img-top" src="@Linkphoto" alt="Card image cap">
+                                </div>
+                            </a>
+                            <div class="card-body">
+                                <a href="@Url.Action("VT_Video","JP",new { id = item.video.yt_video_id})">
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.video.title)</h5>
+                                    <p>@Html.DisplayFor(modelItem => item.vtuber.yt_channel_name)</p>
+                                    <p>@Html.DisplayFor(modelItem => item.video.published_at)</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    n += 1;
+                };
+
+            }
+        </div>
+        <div id="d"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" @*integrity="sha512-rcjfoab9cvkoh/w/t6gbbxnah5azhy4+q1exw5xeurefhbikrbq++zr+gbclo3/d3q583x/go4fkmofuhkkrda=="*@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                videoWidth: 600,
+                videoHeight: 400,
+                stagePadding: 10,
+                //margin: 20,
+                //paddingleft: 10,
+                loop: true,
+
+                video: true,
+                nav: true,
+                center: true,
+                dots: false,
+                smartSpeed: 1000,
+                responsive: {
+                    300: {
+                        items: 1.1,
+                        videoWidth: 300,
+                        videoHeight: 200,
+                        nav: false
+                    },
+                    1200: {
+                        items: 1.6
+                    },
+                    1500: {
+                        items: 2
+                    },
+                    1700: {
+                        items: 2.25
+                    },
+                    1900: {
+                        items: 2.5
+                    },
+                    2100: {
+                        items: 2.8
+                    }
+                }
+            });
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

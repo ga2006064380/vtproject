@@ -1,0 +1,349 @@
+@media (min-width: 640px) {
+    .container {
+        max-width: 670px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 798px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1054px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1310px;
+    }
+}
+
+.body {
+    height: 100rem;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+.set-main {
+    color: white;
+}
+
+    .set-main > h1 {
+        font-weight: 600;
+        padding-top: 2rem;
+        padding-left: 1.5rem;
+        margin-left: 0;
+        letter-spacing: 2px;
+    }
+
+.set-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.set-lanuage {
+    background: #676767;
+    width: 48%;
+    height: 300px;
+    margin:0 auto;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.set-all {
+    background: #676767;
+    width: 48%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+    .set-lanuage > h4, .set-all > h4 {
+        display: flex;
+        align-items: center;
+        padding-top: 0.8rem;
+        padding-left: 1rem;
+    }
+
+.set-lanuage-font, .set-all-font {
+    padding-left: 0.5rem;
+    font-weight: 500;
+}
+
+.set-lanuage > h4 > i, .set-all > h4 > i {
+    font-size: 2.2rem;
+}
+
+.set-all h3 {
+    font-size: 1.2rem;
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+}
+
+.set-lanuage-titie {
+    margin: 1rem 0 0 1rem;
+}
+
+    .set-lanuage-titie h4 {
+        font-size: 1.2rem;
+    }
+
+.set-lanuage-flex {
+    display:flex;
+}
+
+.set-lanuage-flex a{
+    background: #FFC960;
+    text-decoration: none;
+    color: #737372;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 1rem 0 0;
+}
+
+
+/*----------------------------Home-----------------------------*/
+.dark-toggle {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 95px;
+    position: absolute;
+    /*top: 50rem;
+    left:30rem;
+    z-index:999;*/
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.dark-toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+    /*.dark-toggle-checkbox:checked + .dark-toggle-switch {
+        background: #ccc;
+    }*/
+
+.dark-toggle-switch {
+    display: inline-block;
+    background: #4c4b52;
+    border-radius: 16px;
+    width: 50px;
+    height: 30px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+    top: 48px;
+}
+
+/*.dark-toggle-checkbox:checked + .dark-toggle-switch:before {
+    left: 27px;
+}*/
+
+.dark-toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 25%);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4.8px;
+    left: 4px;
+    transition: left 0.25s;
+}
+
+.dark-toggle-switch:before, .dark-toggle-switch:after {
+    content: "";
+}
+
+.dark-toggle-label {
+    margin-left: 5px;
+    position: relative;
+}
+/*----------------------------Home-----------------------------*/
+
+
+.Main-active {
+    background-color: #F3F3F2;
+}
+
+/*----------------------------------SET------------------------------*/
+
+    .Main-active > .lay-Index-nav-bg {
+        background: #FFC960;
+    }
+
+    .Main-active .lay-Index-nav-flex a {
+        color: #737372;
+    }
+
+    .Main-active .lay-Index-nav-link a {
+        color: #737372;
+    }
+
+    .Main-active .lay-Index-nav-link > a:hover span {
+        background: #737372;
+    }
+
+    .Main-active .lay-Index-sidebar-toggle {
+        color: #737372;
+    }
+
+    .Main-active .lay-Index-sidebar-toggle:hover {
+        background-color: white;
+    }
+
+    .Main-active > .lay-Index-sidenav {
+        background-color: white;
+    }
+
+        .Main-active > .lay-Index-sidenav li a {
+            color: #737372;
+        }
+
+    .Main-active .set-lanuage{
+        background:white;
+    }
+
+    .Main-active .set-all {
+        background: white;
+    }
+
+    .Main-active .set-all h3{
+        color: black;
+    }
+
+    .Main-active .set-flex h4 {
+        color: black;
+    }
+
+    .Main-active .dark-toggle-switch {
+        background: #ccc;
+    }
+
+    .Main-active .dark-toggle-switch::before {
+        left: 27px;
+    }
+
+    .Main-active .set-main > h1 {
+        color: black !important;
+    }
+/*----------------------------------SET------------------------------*/
+
+/*----------------------------------home------------------------------*/
+.Main-active .owl-stage-outer {
+    border: 40px solid #d4d7db;
+}
+
+.Main-active .VTDis-gd-title p, .Main-active .VTDis-title p{
+    color:black;
+}
+
+.Main-active .owl-nav span {
+    color:black;
+}
+
+.Main-active .card-flex {
+    background: #d4d7db;
+}
+
+.Main-active .card-body {
+    background: #484545e0;
+}
+/*----------------------------------home------------------------------*/
+
+/*----------------------------------Video------------------------------*/
+.Main-active .video-secton-card-main {
+    background: #d4d7db;
+}
+
+.Main-active .video-header-yt-content h3, .Main-active .video-header-yt-content h4 {
+    color: black;
+}
+
+.Main-active .video-section-title p {
+    color: black;
+}
+
+.Main-active .video-section-card-box {
+    background: #484545e0;
+}
+/*----------------------------------Video------------------------------*/
+
+/*----------------------------------About------------------------------*/
+.Main-active .about-header h2{
+    color:black;
+}
+
+.Main-active .about-content-purpose, .Main-active .about-content-thanks,
+.Main-active .about-content-developer, .Main-active .about-content-question,
+.Main-active .about-content-contact, .Main-active .about-content-link,
+.Main-active .about-content-update {
+    background: #d4d7db;
+    transition: 0.5s;
+}
+
+.Main-active .about-content-flex{
+    color:black;
+}
+
+.Main-active .about-question-btn {
+    background: rgb(155 155 155);
+}
+
+.Main-active .about-question-div {
+    background: #818181;
+    color: white;
+}
+
+.Main-active .set-ac-header {
+    background: rgb(155 155 155);
+}
+
+.Main-active .set-ac-card {
+    background: #818181 !important;
+}
+/*----------------------------------About------------------------------*/
+
+@media(min-width:768px){
+    .set-lanuage-flex a {
+        font-size:1.3rem;
+        width:15%;
+    }
+}
+
+@media(max-width:640px) {
+    .set-main > h1 {
+        padding-left: 0; 
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .set-flex {
+        flex-direction: column;
+    }
+
+    .set-lanuage {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .set-all {
+        width: 85%;
+        margin: 1rem auto 0;
+    }
+}

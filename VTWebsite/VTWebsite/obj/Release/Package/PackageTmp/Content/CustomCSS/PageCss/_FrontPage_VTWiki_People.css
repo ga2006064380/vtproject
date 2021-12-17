@@ -1,0 +1,326 @@
+
+
+.lay-wiki-people-HL-members > h1 {
+    position: absolute;
+    opacity: 0.4;
+    z-index: -2;
+    color: #94DAFF;
+    transform: rotate(340deg);
+    font-family: 'Shrikhand', cursive;
+}
+
+.lay-wiki-people-h1 {
+    font-size: 5rem;
+    top: 11%;
+    left:3%;
+}
+
+.lay-wiki-people-h2 {
+    font-size: 7.5rem;
+    top: 16%;
+    left: 2%;
+}
+
+.lay-wiki-people-NJ-members > h1 {
+    position: absolute;
+    opacity: 0.4;
+    z-index: -2;
+    color: #94DAFF;
+    transform: rotate(340deg);
+    font-family: Shrikhand, sans-serif;
+}
+
+.lay-wiki-people-NJ-members{
+    display:none;
+}
+/*---------------------------head----------------------------*/
+.lay-wiki-people-head {
+    padding: 5rem 0 4rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*.lay-wiki-people-head-border {
+    margin: 0 auto;
+    width: 30%;
+    max-width:400px;
+    min-width:360px;
+    padding: 0.8rem 3rem 0.8rem;
+    border-radius: 35px;
+    box-shadow: 0px 1px 10px rgba(100,100,0,0.1);
+    background: #21512223;
+}*/
+
+.lay-wiki-people-head-border {
+    margin: 0 auto;
+    width: 20%;
+    max-width: 450px;
+    min-width: 360px;
+    padding: 0.8rem 1rem 0.8rem;
+    border-radius: 35px;
+}
+
+/*.lay-wiki-people-head-flex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}*/
+
+/*.lay-wiki-people-head-flex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position:relative;
+    padding: 0.8rem 2.5rem 0.8rem;
+    box-shadow: 0px 1px 10px rgb(100 100 0 / 10%);
+    border-radius: 30px;
+    background: #21512223;
+}*/
+
+.lay-wiki-people-head-flex {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0px 1px 10px rgb(100 100 0 / 10%);
+    border-radius: 35px;
+    background: white;
+}
+
+.lay-wiki-people-head-flex::before{
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(70deg,#6d54f6c9,#04affb );
+    transition: left 300ms ease-in-out 0s;
+    content: "";
+    left: calc(0%);
+    width: calc(50%);
+    border-radius:35px
+;
+}
+
+.lay-wiki-people-head-flex button {
+    border: none;
+    background:none;
+    transition:300ms ease-in-out 0s;
+    position:relative;
+    font-weight:600;
+    top:-1px;
+    padding:6% 50px 5%;
+}
+
+/*.lay-wiki-people-head-HL {
+    padding: 0.4rem 1.5rem 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(70deg,#6d54f6c9,#04affb );
+    color: white;
+    margin-right: 1rem;
+    border-radius: 30px;
+}*/
+
+.lay-wiki-people-head-HL {
+    padding: 0.8rem 3rem 0.8rem;
+    cursor: pointer;
+    background: white;
+    color: white;
+    margin-right: -2.5rem;
+    border-radius: 30px;
+}
+
+/*.lay-wiki-people-head-NJ {
+    padding: 0.2rem 1.5rem 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(70deg, rgb(255, 140, 65, 0.98),rgb(255, 90, 0));
+    color: white;
+    border-radius: 30px;
+}*/
+
+.lay-wiki-people-head-NJ {
+    padding: 0.8rem 3rem 0.8rem;
+    cursor: pointer;
+    background: white;
+    color: black;
+    border-radius: 30px;
+}
+/*---------------------------head----------------------------*/
+
+/*---------------------------section----------------------------*/
+.lay-wiki-people-section-flex{
+    display:flex;
+    flex-wrap:wrap;
+    width: calc(77%);
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.lay-wiki-people-section-mb {
+    padding-bottom: 38px;
+    width: 17%;
+    margin-bottom: 4rem;
+}
+
+.lay-wiki-people-section-mt {
+    padding-top: 38px;
+    width: 17%;
+}
+
+.lay-wiki-people-section-content {
+    position: relative;
+    width: 100%;
+    background: #21512223;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+
+.lay-wiki-people-section-font {
+    padding-top: 0.8rem;
+    padding-bottom: 0.5rem;
+    color:aliceblue;
+    background: #94DAFF;
+    font-size:19px;
+    font-weight:600;
+    text-align:center;
+}
+
+.lay-wiki-people-section-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: background 0.3s ease 0s;
+}
+
+.lay-wiki-people-section-img:hover{
+    background:yellow;
+    transition: background 0.3s ease 0s;
+}
+
+#People_Hololive img {
+    position: absolute;
+    bottom: 0;
+    right: -40%;
+    /*left: 50%;*/
+    width: auto;
+    height: 100%;
+    /*transform:translateX(-50%);*/
+}
+
+#People_Nijisanji img {
+    position: absolute;
+    bottom: 0;
+    right: -20%;
+    width: auto;
+    height: 100%;
+}
+
+
+/*.lay-wiki-people-section-img > img {
+    position: absolute;
+    bottom: 0;
+    right: -20%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transform:translateX(-50%);
+}*/
+
+
+.lay-wiki-people-section-img::after {
+    display: block;
+    padding-top: 180%;
+    content: "";
+}
+
+.lay-wiki-people-PC-ml {
+    margin: 0px 0px 0px 3.750488400459289%;
+}
+
+
+
+/*.lar-wiki-people-section-font{
+    position:absolute;
+    margin-top:16px;
+    right:0;*/
+/*padding-left:25%;
+    text-align:right;*/
+/*}
+
+.lar-wiki-people-section-font > span{
+    position:relative;
+    display:block;
+    float: left;
+    font-weight:600;
+    font-size:20px;
+
+}
+
+.lar-wiki-people-section-font > span::after{
+    position:absolute;
+    top: calc(100% - 2px);
+    left:0px;
+    height:2px;
+    width:100%;
+    background-color:black;
+    border-radius:1px;
+    transition:background 0.3s ease 0s;
+    content:"";
+}*/
+/*---------------------------section----------------------------*/
+@media (max-width: 640px) {
+    .lay-wiki-people-head {
+        padding:2rem 0 3rem;
+    }
+
+    .lay-wiki-people-section-flex {
+        width: calc(95%);
+    }
+    .lay-wiki-people-section-mb {
+        /*width:46%;
+        margin-bottom:0;
+        padding-bottom:70px;*/
+        width: 40%;
+        margin: 0 5% 0;
+    }
+    .lay-wiki-people-section-mt {
+        /*padding-top: 25px;*/
+        padding-top:0px;
+        width: 40%;
+    }
+    .lay-wiki-people-PC-ml {
+        /*margin: 0px 0px 0px 0px;*/
+    }
+    .lay-wiki-people-MB-ml {
+        margin: 0 5% 0;
+        /*margin: 0px 0px 0px 8%;*/
+    }
+    .lay-wiki-people-HL-members > h1 {
+        display:none;
+    }
+    .lay-wiki-people-NJ-members > h1 {
+        display: none;
+    }
+}
+
+/*@media (min-width:768px){
+    .lay-wiki-people-md-1{
+        padding-top:0;
+        padding-bottom:38px;
+        margin-bottom:4rem;
+    }
+
+    .lay-wiki-people-md-2{
+        padding-bottom:0;
+        padding-top:38px;
+    }
+}*/
+
+.lay-wiki-people-content {
+    display: none;
+}
+
+.lay-wiki-people-content.lay-wiki-people-active{
+    display:flex;
+}
